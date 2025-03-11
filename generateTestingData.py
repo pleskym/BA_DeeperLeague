@@ -33,7 +33,7 @@ def generate_yolo_training_data(annotation_id, x_center_point_pct, y_center_poin
 
     return '{0} {1} {2} {3} {4}'.format(annotation_id, x_center_point, y_center_point, x_size, y_size)
 
-def do_work(int_counter, champ_map):
+def do_work(int_counter, champ_map, ping_map):
 
     max_champ = len(champ_map)
     all_champ_names = []
@@ -187,9 +187,130 @@ def do_work(int_counter, champ_map):
         yolo_training_data = generate_yolo_training_data(champ_annotation_id, champ_x_center_point_as_pct, champ_y_center_point_as_pct, image_size/map_size[0], image_size/map_size[1])
 
         champ_annotations.append(yolo_training_data)
+    
+    #Add pings to the minimap
+    random_ping_ids = []
+    for i in range(15):
+        ping_name = random.choice(list(ping_map.values()))['ping_name']
+        annotation_from_ping_name = [key for key, value in ping_map.items() if value['ping_name'] == ping_name][0]
+        random_ping_ids.append(annotation_from_ping_name)
+
+    # Store existing ping positions for potential overlaps
+    existing_ping_positions = []
+
+    for ping_id in random_ping_ids:
+        ping_name = ping_map[str(ping_id)]['ping_name']
+        #ping_image_choice = random.randint(1, ping_map[str(ping_id)]['ping_images'])
+        
+        ping_image = Image.open(f"assets/standard_pings/{ping_name}/1.png").convert("RGBA")
+
+        #Random placement - near champs or anywhere
+        #33% to be placed near champ or other ping
+        if random.randint(0, 2) == 0:
+            #50% chance to appear near a champion
+            if random.randint(0, 1) == 0:  
+                champ_center_point = random.choice(champ_center_points)
+                ping_x_center_point = int(map.size[0] * champ_center_point[0]) + random.randint(-15, 15)
+                ping_y_center_point = int(map.size[1] * champ_center_point[1]) + random.randint(-15, 15)
+            #50% chance to appear near other ping    
+            else:
+                if existing_ping_positions:
+                    # Choose an existing ping and add a small offset
+                    ping_x_center_point, ping_y_center_point = random.choice(existing_ping_positions)
+                    ping_x_center_point += random.randint(-5, 5)
+                    ping_y_center_point += random.randint(-5, 5)
+                else:
+                    # If no pings exist yet, place it randomly
+                    ping_x_center_point = random.randint(0, map.size[0])
+                    ping_y_center_point = random.randint(0, map.size[1])
+        else:
+            #67% chance to appear anywhere
+            ping_x_center_point = random.randint(0, map.size[0])
+            ping_y_center_point = random.randint(0, map.size[1])
+
+        #Store the position for future overlaps
+        existing_ping_positions.append((ping_x_center_point, ping_y_center_point))
+
+        # Resize the ping
+        ping_size = random.randint(15, 35)  # Adjust as needed
+        ping_image = ping_image.resize((ping_size, ping_size))
+
+        # Paste ping onto the minimap
+        map.paste(ping_image, (ping_x_center_point - int(ping_size / 2), ping_y_center_point - int(ping_size / 2)), ping_image)
+
+        #Add a surrounding circle effect
+        circle_images = os.listdir('assets/pings/circles')
+        if(random.randint(0, 3) == 0):
+            # add circles to ping
+            number_of_circles_in_ping = random.randint(1, 3)
+            for ii in range(number_of_circles_in_ping):
+
+                circle_opacity = random.randint(0, 255)
+                # randomly use the tintable circle for 50% of circles
+                if(random.randint(0, 1) == 0):
+                    tintable_images = ['ring_tintable.png', 'ring2_tintable.png']
+                    circle_image_name = random.choice(tintable_images)
+                    circle_image = Image.open('assets/pings/circles/' + circle_image_name).convert("RGBA")
+                    # convert tintable image white to red
+                    circle_image = circle_image.convert("RGBA")
+                    rgba = np.array(circle_image)
+                    b, g, r, a = cv2.split(rgba)
+                    res = cv2.merge((b, g, r, a))
+
+                    #find where the pixels are white and make those red, but the less white ones should be less red
+                    whiteish_pixels = (res[:, :, 0] > 10) & (res[:, :, 1] > 10) & (res[:, :, 2] > 10)
+
+                    values_to_change = np.zeros_like(res)
+
+                    colours = ['red', 'blue', 'yellow']
+                    colour = random.choice(colours)
+
+                    # loop through red_values
+                    for j in range(len(values_to_change)):
+                        for jj in range(len(values_to_change[j])):
+                            if(colour == 'red'):
+                                values_to_change[j][jj][0] = random.randint(200, 255) - res[j][jj][0]
+                                values_to_change[j][jj][1] = 0
+                                values_to_change[j][jj][2] = 0
+                                values_to_change[j][jj][3] = circle_opacity
+                            elif(colour == 'blue'):
+                                values_to_change[j][jj][0] = 0
+                                values_to_change[j][jj][1] = 0
+                                values_to_change[j][jj][2] = random.randint(200, 255) - res[j][jj][0]
+                                values_to_change[j][jj][3] = circle_opacity
+                            elif(colour == 'yellow'):
+                                values_to_change[j][jj][0] = random.randint(200, 255) - res[j][jj][0]
+                                values_to_change[j][jj][1] = random.randint(200, 255) - res[j][jj][0]
+                                values_to_change[j][jj][2] = 0
+                                values_to_change[j][jj][3] = circle_opacity
+
+                    res[whiteish_pixels] = values_to_change[whiteish_pixels]
+                    circle_image = Image.fromarray(res)
+                    circle_size = random.randint(10, 80)
+                    circle_image = circle_image.resize((circle_size, circle_size))
+                    circle_image.save('circle.png')
+                    map.paste(circle_image, (ping_x_center_point - int(circle_size/2), ping_y_center_point - int(circle_size/2)), circle_image)
+
+                else:
+                    
+                    circle_image_name = random.choice(circle_images)
+                    circle_image = Image.open('assets/pings/circles/' + random.choice(circle_images)).convert("RGBA")
+                    circle_size = random.randint(10, 80)
+                    circle_image = circle_image.resize((circle_size, circle_size))
+                    if(random.randint(0, 1) == 0):
+                        circle_image.putalpha(random.randint(0, 40))
+                    map.paste(circle_image, (ping_x_center_point - int(circle_size/2), ping_y_center_point - int(circle_size/2)), circle_image)
+        
+        # Generate YOLO annotation
+        ping_x_as_pct = ping_x_center_point / map.size[0]
+        ping_y_as_pct = ping_y_center_point / map.size[1]
+
+        yolo_training_data = generate_yolo_training_data(ping_id, ping_x_as_pct, ping_y_as_pct, ping_size / map.size[0], ping_size / map.size[1])
+
+        champ_annotations.append(yolo_training_data)
 
     # add pings to map
-    ping_images = [ping_image for ping_image in os.listdir('assets/pings') if ping_image.endswith('.png')]
+    '''ping_images = [ping_image for ping_image in os.listdir('assets/pings') if ping_image.endswith('.png')]
     circle_images = os.listdir('assets/pings/circles')
     
     ping_x_center_point_as_pct = random.randint(0, 1000) / 1000
@@ -298,7 +419,7 @@ def do_work(int_counter, champ_map):
                     if(random.randint(0, 1) == 0):
                         circle_image.putalpha(random.randint(0, 40))
                     map.paste(circle_image, (ping_x_center_point - int(circle_size/2), ping_y_center_point - int(circle_size/2)), circle_image)
-
+'''
 
     # add random minimap icons
     minimap_icons = os.listdir('assets/minimap_icons')
@@ -441,14 +562,19 @@ def do_work(int_counter, champ_map):
 def do_job(int_counter_start, int_counter_end):
     
     champ_map = {}
+    ping_map = {}
+
     with open("champMap.json", "r") as f:
         champ_map = eval(f.read())
+
+    with open("pingMap.json", "r") as f:
+        ping_map = eval(f.read())
 
     int_counter = int_counter_start
     while(int_counter < int_counter_end):
         pct_complete = ((int_counter - int_counter_start) / (int_counter_end - int_counter_start)) * 100
         print(pct_complete)
-        do_work(int_counter, champ_map)
+        do_work(int_counter, champ_map, ping_map)
         int_counter += 1
 
 if __name__ == "__main__":
@@ -456,7 +582,7 @@ if __name__ == "__main__":
     processes = []
 
     number_of_processes = multiprocessing.cpu_count()
-    total_amount = 300000
+    total_amount = 10000
     amount_per_pool = int(total_amount / number_of_processes)
 
     for w in range(number_of_processes):
