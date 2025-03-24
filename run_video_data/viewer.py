@@ -3,13 +3,16 @@ import os
 import json
 import pandas as pd
 from PIL import Image
+import os
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # ---- CONFIG ---- #
-CONFIG_DIR = "run_video_data"
-ANNOTATED_DIR = os.path.join("annotated")
-RESULTS_PATH = os.path.join("results.json")
-ITEM_CSV = os.path.join("player_item_build.csv")
-GOLD_CSV = os.path.join("gold_difference_timeline.csv")
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ANNOTATED_DIR = os.path.join(SCRIPT_DIR, "annotated")
+RESULTS_PATH = os.path.join(SCRIPT_DIR, "results.json")
+ITEM_CSV = os.path.join(SCRIPT_DIR, "player_item_build.csv")
+GOLD_CSV = os.path.join(SCRIPT_DIR, "gold_difference_timeline.csv")
 
 # ---- Load Data ---- #
 frame_files = sorted([f for f in os.listdir(ANNOTATED_DIR) if f.endswith(".png")])
