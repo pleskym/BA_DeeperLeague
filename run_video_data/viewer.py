@@ -1,6 +1,5 @@
 import streamlit as st
 import os
-import cv2
 import json
 import pandas as pd
 from PIL import Image
