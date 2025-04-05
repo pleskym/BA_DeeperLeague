@@ -22,23 +22,23 @@ annotations.sort()
 train_images, val_images, train_annotations, val_annotations = train_test_split(images, annotations, test_size = 0.2, random_state = 1)
 val_images, test_images, val_annotations, test_annotations = train_test_split(val_images, val_annotations, test_size = 0.5, random_state = 1)
 
-os.makedirs('dataset', exist_ok=True)
+#os.makedirs('dataset', exist_ok=True)
 
-os.makedirs('dataset/images', exist_ok=True)
-os.makedirs('dataset/labels', exist_ok=True)
+#os.makedirs('dataset/images', exist_ok=True)
+#os.makedirs('dataset/labels', exist_ok=True)
 
 os.makedirs('dataset/images/train', exist_ok=True)
 os.makedirs('dataset/images/val', exist_ok=True)
-os.makedirs('dataset/images/test', exist_ok=True)
+#os.makedirs('dataset/images/test', exist_ok=True)
 
 os.makedirs('dataset/labels/train', exist_ok=True)
 os.makedirs('dataset/labels/val', exist_ok=True)
-os.makedirs('dataset/labels/test', exist_ok=True)
+#os.makedirs('dataset/labels/test', exist_ok=True)
 
 # Move the splits into their folders
 move_files_to_folder(train_images, 'dataset/images/train')
 move_files_to_folder(val_images, 'dataset/images/val/')
-move_files_to_folder(test_images, 'dataset/images/test/')
+#move_files_to_folder(test_images, 'dataset/images/test/')
 move_files_to_folder(train_annotations, 'dataset/labels/train/')
 move_files_to_folder(val_annotations, 'dataset/labels/val/')
-move_files_to_folder(test_annotations, 'dataset/labels/test/')
+#move_files_to_folder(test_annotations, 'dataset/labels/test/')

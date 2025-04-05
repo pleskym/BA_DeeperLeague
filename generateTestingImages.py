@@ -190,22 +190,20 @@ def do_work(int_counter, champ_map, ping_map):
     
     #Add pings to the minimap
     random_ping_ids = []
-    for i in range(15):
+    for i in range(10):
         ping_name = random.choice(list(ping_map.values()))['ping_name']
         annotation_from_ping_name = [key for key, value in ping_map.items() if value['ping_name'] == ping_name][0]
         random_ping_ids.append(annotation_from_ping_name)
-    """
+
     # Store existing ping positions for potential overlaps
     existing_ping_positions = []
-    """
 
     for ping_id in random_ping_ids:
         ping_name = ping_map[str(ping_id)]['ping_name']
         #ping_image_choice = random.randint(1, ping_map[str(ping_id)]['ping_images'])
         
         ping_image = Image.open(f"assets/standard_pings/{ping_name}/1.png").convert("RGBA")
-        
-        """
+
         #Random placement - near champs or anywhere
         #33% to be placed near champ or other ping
         if random.randint(0, 2) == 0:
@@ -229,12 +227,9 @@ def do_work(int_counter, champ_map, ping_map):
             #67% chance to appear anywhere
             ping_x_center_point = random.randint(0, map.size[0])
             ping_y_center_point = random.randint(0, map.size[1])
-        
+
         #Store the position for future overlaps
         existing_ping_positions.append((ping_x_center_point, ping_y_center_point))
-        """
-        ping_x_center_point = random.randint(0, map.size[0])
-        ping_y_center_point = random.randint(0, map.size[1])
 
         # Resize the ping
         ping_size = random.randint(15, 35)  # Adjust as needed
@@ -243,7 +238,6 @@ def do_work(int_counter, champ_map, ping_map):
         # Paste ping onto the minimap
         map.paste(ping_image, (ping_x_center_point - int(ping_size / 2), ping_y_center_point - int(ping_size / 2)), ping_image)
 
-        """
         #Add a surrounding circle effect
         circle_images = os.listdir('assets/pings/circles')
         if(random.randint(0, 3) == 0):
@@ -306,7 +300,7 @@ def do_work(int_counter, champ_map, ping_map):
                     if(random.randint(0, 1) == 0):
                         circle_image.putalpha(random.randint(0, 40))
                     map.paste(circle_image, (ping_x_center_point - int(circle_size/2), ping_y_center_point - int(circle_size/2)), circle_image)
-        """
+        
         # Generate YOLO annotation
         ping_x_as_pct = ping_x_center_point / map.size[0]
         ping_y_as_pct = ping_y_center_point / map.size[1]
@@ -314,7 +308,7 @@ def do_work(int_counter, champ_map, ping_map):
         yolo_training_data = generate_yolo_training_data(ping_id, ping_x_as_pct, ping_y_as_pct, ping_size / map.size[0], ping_size / map.size[1])
 
         champ_annotations.append(yolo_training_data)
-        
+
     # add random minimap icons
     minimap_icons = os.listdir('assets/minimap_icons')
     for i in range(random.randint(0, 10)):
@@ -427,13 +421,13 @@ def do_work(int_counter, champ_map, ping_map):
 
             map.paste(text_image, (text_x_center_point, text_y_center_point), text_image)
 
-    os.makedirs('raw_training_data', exist_ok=True)
-    os.makedirs('raw_training_data/annotations', exist_ok=True)
-    os.makedirs('raw_training_data/images', exist_ok=True)
+    os.makedirs('dataset', exist_ok=True)
+    os.makedirs('dataset/labels/test/', exist_ok=True)
+    os.makedirs('dataset/images/test/', exist_ok=True)
 
     if(random.randint(0, 10) == 0): # 1 in 10 remains original quality
         map = map.convert('RGB')
-        map.save('raw_training_data/images/' + int_counter.__str__() + '.jpg', format='JPEG')
+        map.save('dataset/images/test/' + int_counter.__str__() + '.jpg', format='JPEG')
     else:
         resize_amount = (random.randint(10, 20) / 10) ** 2
 
@@ -446,9 +440,9 @@ def do_work(int_counter, champ_map, ping_map):
 
         map = map.convert('RGB')
         random_quality = (random.randint(2, 9) ** 2) + 20
-        map.save('raw_training_data/images/' + int_counter.__str__() + '.jpg', format='JPEG', quality=random_quality)
+        map.save('dataset/images/test/' + int_counter.__str__() + '.jpg', format='JPEG', quality=random_quality)
 
-    with open('raw_training_data/annotations/' + int_counter.__str__() + '.txt', 'w') as f:
+    with open('dataset/labels/test/' + int_counter.__str__() + '.txt', 'w') as f:
         f.write('\n'.join(champ_annotations))
 
     int_counter += 1
@@ -476,7 +470,7 @@ if __name__ == "__main__":
     processes = []
 
     number_of_processes = multiprocessing.cpu_count()
-    total_amount = 10000
+    total_amount = 1000
     amount_per_pool = int(total_amount / number_of_processes)
 
     for w in range(number_of_processes):
