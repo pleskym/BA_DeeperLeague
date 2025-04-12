@@ -8,19 +8,19 @@ import numpy as np
 
 # ---- CONFIGURATION ---- #
 CONFIG_DIR = "run_video_data"
-VIDEO_PATH = os.path.join(CONFIG_DIR, "video.mp4")
+VIDEO_PATH = os.path.join("H:/TwitchDownloaderCLI/Videos/video_2.mp4")
 TEMPLATE_PATH = os.path.join(CONFIG_DIR, "minimap.png")
-MODEL_PATH = os.path.join(CONFIG_DIR, "best_1530_10032025.pt")
-
+MODEL_PATH = os.path.join(CONFIG_DIR, "best.pt")
 FRAMES_DIR = os.path.join(CONFIG_DIR, "frames")
-ANNOTATED_DIR = os.path.join(CONFIG_DIR, "annotated")
+#ANNOTATED_DIR = os.path.join(CONFIG_DIR, "annotated")
+MINIMAP_POS_DIR = os.path.join(CONFIG_DIR, "minimap_position")  # New directory
 FPS = 2  # reduced frames per second to limit data
 CONFIDENCE_THRESHOLD = 0.65  # minimum confidence to include a prediction
 FRAME_SKIP = 2  # process every Nth frame to reduce output
 
-# ---- SETUP ---- #
 os.makedirs(FRAMES_DIR, exist_ok=True)
-os.makedirs(ANNOTATED_DIR, exist_ok=True)
+#os.makedirs(ANNOTATED_DIR, exist_ok=True)
+os.makedirs(MINIMAP_POS_DIR, exist_ok=True)
 
 model = YOLO(MODEL_PATH)
 
@@ -33,39 +33,40 @@ def extract_frames(video_path, output_folder, fps=FPS):
     subprocess.run(cmd)
 
 def detect_minimap(image):
-    template = cv2.imread(TEMPLATE_PATH)
-    if template is None:
-        raise FileNotFoundError(f"Template not found at {TEMPLATE_PATH}")
-
     image_height, image_width = image.shape[:2]
-    template_height, template_width = template.shape[:2]
 
-    roi_width = int(image_width * 0.27)
-    roi_height = int(image_height * 0.27)
+    roi_width = int(image_width * 0.3)
+    roi_height = int(image_height * 0.3)
     roi_x = image_width - roi_width
     roi_y = image_height - roi_height
 
     roi = image[roi_y:image_height, roi_x:image_width]
 
-    if template_height > roi.shape[0] or template_width > roi.shape[1]:
-        scaling_factor = min(roi.shape[0] / template_height, roi.shape[1] / template_width)
-        template = cv2.resize(template, None, fx=scaling_factor, fy=scaling_factor, interpolation=cv2.INTER_AREA)
-        template_height, template_width = template.shape[:2]
+    gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
+    blur = cv2.GaussianBlur(gray, (5, 5), 0)
+    edges = cv2.Canny(blur, 30, 150)
 
-    result = cv2.matchTemplate(roi, template, cv2.TM_CCOEFF_NORMED)
-    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+    contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    top_left = max_loc
-    bottom_right = (top_left[0] + template_width, top_left[1] + template_height)
+    best_box = None
+    best_score = 0
 
-    top_left_original = (int(top_left[0] + roi_x), int(top_left[1] + roi_y))
-    bottom_right_original = (int(bottom_right[0] + roi_x), int(bottom_right[1] + roi_y))
+    for cnt in contours:
+        x, y, w, h = cv2.boundingRect(cnt)
+        area = w * h
+        aspect_ratio = w / float(h)
 
-    x, y = top_left_original
-    w = bottom_right_original[0] - x
-    h = bottom_right_original[1] - y
+        if 0.85 <= aspect_ratio <= 1.15 and area > 500:  # roughly square
+            score = area
+            if score > best_score:
+                best_score = score
+                best_box = (x + roi_x, y + roi_y, w, h)
 
-    return int(x), int(y), int(w), int(h)
+    if best_box is None:
+        raise ValueError("Minimap not found via contour detection.")
+
+    return best_box  # returns (x, y, w, h)
+
 
 def draw_predictions(image, predictions):
     for x1, y1, x2, y2, name, prob in predictions:
@@ -90,7 +91,6 @@ def get_predictions_from_image(image):
 
 def process_frames():
     results_dict = {}
-    results_dict = {}
     frame_files = sorted([f for f in os.listdir(FRAMES_DIR) if f.endswith(".png")])
     if not frame_files:
         print("[ERROR] No frames found.")
@@ -102,13 +102,15 @@ def process_frames():
     try:
         x, y, w, h = detect_minimap(first_frame)
         print(f"[INFO] Minimap detected at: x={x}, y={y}, w={w}, h={h}")
+
+        minimap_crop = first_frame[y:y+h, x:x+w]
+        cv2.imwrite(os.path.join(MINIMAP_POS_DIR, "detectedMinimap.png"), minimap_crop)
+        print(f"[INFO] Saved detected minimap to {MINIMAP_POS_DIR}/minimap.png")
     except Exception as e:
         print(f"[ERROR] Minimap detection failed on first frame: {e}")
         return
 
     for i, filename in enumerate(frame_files):
-        if i % FRAME_SKIP != 0:
-            continue
         if i % FRAME_SKIP != 0:
             continue
 
@@ -119,9 +121,9 @@ def process_frames():
             x, y, w, h = int(x), int(y), int(w), int(h)
             minimap = frame[y:y+h, x:x+w]
             predictions = get_predictions_from_image(PILImage.fromarray(cv2.cvtColor(minimap, cv2.COLOR_BGR2RGB)))
-            annotated_minimap = draw_predictions(minimap.copy(), predictions)
-            annotated_path = os.path.join(ANNOTATED_DIR, filename)
-            cv2.imwrite(annotated_path, annotated_minimap)
+            #annotated_minimap = draw_predictions(minimap.copy(), predictions)
+            #annotated_path = os.path.join(ANNOTATED_DIR, filename)
+            #cv2.imwrite(annotated_path, annotated_minimap)
 
             timestamp = i / FPS  # seconds
             results_dict[filename] = {
@@ -140,4 +142,5 @@ if __name__ == "__main__":
     extract_frames(VIDEO_PATH, FRAMES_DIR, FPS)
     print("[INFO] Processing frames...")
     process_frames()
-    print(f"[DONE] Annotated frames saved to {ANNOTATED_DIR}")
+    print(f"[DONE] Saved minimap to {MINIMAP_POS_DIR} and results to results.json")
+    #print(f"[DONE] Annotated frames saved to {ANNOTATED_DIR}")
