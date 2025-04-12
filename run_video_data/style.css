@@ -1,0 +1,38 @@
+/* style.css */
+.main > div {
+    display: flex;
+    justify-content: center;
+}
+.block-container {
+    max-width: 60%;  /* optional: limit width */
+    margin: 50 auto;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+.icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease, scale 0.2s ease;
+}
+.icon:hover {
+    z-index: 10;
+    transform: translate(-50%, -50%) scale(1.5);
+}
+.icon:hover::after {
+    content: attr(data-label);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: white;
+    padding: 2px 6px;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
