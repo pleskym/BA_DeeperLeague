@@ -3,7 +3,6 @@ raw_training_data
 dataset
 venv
 runs
-champions/
 run_video_data/video.mp4
 run_video_data/frames/
 circle.png
