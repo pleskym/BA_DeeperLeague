@@ -56,7 +56,7 @@ def extract_runes_from_table(soup, participant_id):
 
 def main():
     url = "https://www.leagueofgraphs.com/match/euw/7360565181#participant8"
-    participant_id = "participant8"
+    participant_id = url.split("#")[-1]
 
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
