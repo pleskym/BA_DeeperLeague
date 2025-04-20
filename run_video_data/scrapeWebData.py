@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import os
+import subprocess
 
 def extract_item_build_timeline(soup, participant_id):
     participant_items = []
@@ -54,6 +55,48 @@ def extract_runes_from_table(soup, participant_id):
                 runes = [img["alt"].strip() for img in rune_imgs if img.has_attr("alt")]
     return pd.DataFrame(runes, columns=["Runes"])
 
+def extract_twitch_vod_info(soup):
+    link = soup.find("a", class_="twitchSpectatePopupLink", attrs={"data-rel": "twitchSpectatePopup"})
+    if link:
+        raw_timestamp = int(link.get("data-video-timestamp"))
+        # Convert from milliseconds to seconds
+        timestamp = raw_timestamp // 1000
+        return {
+            "vod_id": link.get("data-video-id"),
+            "timestamp": timestamp
+        }
+    return None
+
+def convert_seconds_to_hms(seconds):
+    h = seconds // 3600
+    m = (seconds % 3600) // 60
+    s = seconds % 60
+    return f"{h:02}:{m:02}:{s:02}"
+
+def extract_game_duration_seconds(soup):
+    duration_tag = soup.find("span", class_="gameDuration")
+    if duration_tag:
+        time_str = duration_tag.text.strip().strip("()")  # remove parentheses
+        if ":" in time_str:
+            mins, secs = map(int, time_str.split(":"))
+            return mins * 60 + secs
+    return 1800  # fallback if not found
+
+def download_vod_clip(vod_id, start_seconds, duration, output_path="video_clip.mp4", buffer_seconds=30):
+    start_seconds = start_seconds + 30 # Matches start 30 seconds later from timestamp in LeageuOfGraphs
+    end_seconds = start_seconds + duration + buffer_seconds
+    command = [
+        "TwitchDownloaderCLI.exe",
+        "videodownload",
+        "--id", vod_id,
+        "-b", convert_seconds_to_hms(start_seconds),
+        "-e", convert_seconds_to_hms(end_seconds),
+        "-o", output_path
+    ]
+    print("Running TwitchDownloaderCLI command:", " ".join(command))
+    subprocess.run(command, check=True)
+    print(f"VOD clip saved as: {output_path}")
+
 def main():
     url = "https://www.leagueofgraphs.com/match/euw/7360565181#participant8"
     participant_id = url.split("#")[-1]
@@ -78,6 +121,19 @@ def main():
         runes_df.to_csv("webdata/runes.csv", index=False)
 
         print("Data extracted and saved to 'webdata/'!")
+
+        # Extract VOD info and download
+        vod_info = extract_twitch_vod_info(soup)
+        game_duration = extract_game_duration_seconds(soup)
+        if vod_info:
+            download_vod_clip(
+                vod_id = vod_info["vod_id"],
+                start_seconds = (vod_info["timestamp"]),
+                duration = (game_duration),
+                output_path = "H:/TwitchDownloaderCLI/Videos/video.mp4"
+            )
+        else:
+            print("No Twitch VOD info found in page.")
     else:
         print(f"Failed to load page: {response.status_code}")
 

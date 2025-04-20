@@ -8,18 +8,17 @@ import numpy as np
 
 # ---- CONFIGURATION ---- #
 CONFIG_DIR = "run_video_data"
-VIDEO_PATH = os.path.join("H:/TwitchDownloaderCLI/Videos/video_2.mp4")
+VIDEO_PATH = os.path.join("H:/TwitchDownloaderCLI/Videos/video_3.mp4")
 TEMPLATE_PATH = os.path.join(CONFIG_DIR, "minimap.png")
 MODEL_PATH = os.path.join(CONFIG_DIR, "best.pt")
 FRAMES_DIR = os.path.join(CONFIG_DIR, "frames")
-#ANNOTATED_DIR = os.path.join(CONFIG_DIR, "annotated")
-MINIMAP_POS_DIR = os.path.join(CONFIG_DIR, "minimap_position")  # New directory
+MINIMAP_POS_DIR = os.path.join(CONFIG_DIR, "minimap_position")
 FPS = 2  # reduced frames per second to limit data
 CONFIDENCE_THRESHOLD = 0.65  # minimum confidence to include a prediction
 FRAME_SKIP = 2  # process every Nth frame to reduce output
+MINIMAP_SCORE_THRESHOLD = 40000  # Mindestfläche als Score für gültige Minimap-Erkennung
 
 os.makedirs(FRAMES_DIR, exist_ok=True)
-#os.makedirs(ANNOTATED_DIR, exist_ok=True)
 os.makedirs(MINIMAP_POS_DIR, exist_ok=True)
 
 model = YOLO(MODEL_PATH)
@@ -62,18 +61,12 @@ def detect_minimap(image):
                 best_score = score
                 best_box = (x + roi_x, y + roi_y, w, h)
 
+    if best_score < MINIMAP_SCORE_THRESHOLD:
+        raise ValueError(f"Minimap score too low ({best_score}), skipping frame")
+
     if best_box is None:
         raise ValueError("Minimap not found via contour detection.")
-
     return best_box  # returns (x, y, w, h)
-
-
-def draw_predictions(image, predictions):
-    for x1, y1, x2, y2, name, prob in predictions:
-        cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
-        text = f'{name}: {prob:.2f}'
-        cv2.putText(image, text, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
-    return image
 
 def get_predictions_from_image(image):
     results = model.predict(image)
@@ -96,19 +89,16 @@ def process_frames():
         print("[ERROR] No frames found.")
         return
 
-    first_frame_path = os.path.join(FRAMES_DIR, frame_files[0])
-    first_frame = cv2.imread(first_frame_path)
-
-    try:
-        x, y, w, h = detect_minimap(first_frame)
-        print(f"[INFO] Minimap detected at: x={x}, y={y}, w={w}, h={h}")
-
-        minimap_crop = first_frame[y:y+h, x:x+w]
-        cv2.imwrite(os.path.join(MINIMAP_POS_DIR, "detectedMinimap.png"), minimap_crop)
-        print(f"[INFO] Saved detected minimap to {MINIMAP_POS_DIR}/minimap.png")
-    except Exception as e:
-        print(f"[ERROR] Minimap detection failed on first frame: {e}")
-        return
+    minimap_found_once = False
+    x = y = w = h = None
+    start_frame = None
+    end_frame = None
+    start_frame_index = 0
+    miss_counter = 0
+    max_consecutive_misses = 5
+    prediction_miss_counter = 0
+    max_prediction_misses = 5
+    empty_prediction_buffer = []
 
     for i, filename in enumerate(frame_files):
         if i % FRAME_SKIP != 0:
@@ -118,21 +108,57 @@ def process_frames():
         frame = cv2.imread(frame_path)
 
         try:
-            x, y, w, h = int(x), int(y), int(w), int(h)
-            minimap = frame[y:y+h, x:x+w]
-            predictions = get_predictions_from_image(PILImage.fromarray(cv2.cvtColor(minimap, cv2.COLOR_BGR2RGB)))
-            #annotated_minimap = draw_predictions(minimap.copy(), predictions)
-            #annotated_path = os.path.join(ANNOTATED_DIR, filename)
-            #cv2.imwrite(annotated_path, annotated_minimap)
+            if not minimap_found_once:
+                box = detect_minimap(frame)
+                print(f"[MINIMAP] Detected in frame {filename} with box {box}")
+                x, y, w, h = box
+                minimap_crop = frame[y:y+h, x:x+w]
+                cv2.imwrite(os.path.join(MINIMAP_POS_DIR, "minimap.png"), minimap_crop)
+                print(f"[INFO] First minimap saved: frame {filename} at x={x}, y={y}, w={w}, h={h}")
+                minimap_found_once = True
+                start_frame = filename
+                start_frame_index = i
+            else:
+                try:
+                    _ = detect_minimap(frame)
+                    miss_counter = 0
+                except:
+                    miss_counter += 1
+                    print(f"[MISS] Frame {filename}: Minimap not visible ({miss_counter}/{max_consecutive_misses})")
 
-            timestamp = i / FPS  # seconds
+                box = (x, y, w, h)
+
+            minimap = frame[y:y+h, x:x+w]
+            timestamp = (i - start_frame_index) / FPS
+            predictions = get_predictions_from_image(PILImage.fromarray(cv2.cvtColor(minimap, cv2.COLOR_BGR2RGB)))
+            
+            if not predictions:
+                prediction_miss_counter += 1
+                empty_prediction_buffer.append(filename)
+                print(f"[NO PRED] Frame {filename}: No predictions ({prediction_miss_counter}/{max_prediction_misses})")
+            else:
+                prediction_miss_counter = 0
+                empty_prediction_buffer = []
+            
             results_dict[filename] = {
                 "timestamp": f"{int(timestamp // 3600):02}:{int((timestamp % 3600) // 60):02}:{int(timestamp % 60):02}",
                 "predictions": predictions
             }
+            
+            # Matchende wenn beide Bedingungen erfüllt sind
+            if miss_counter >= max_consecutive_misses and prediction_miss_counter >= max_prediction_misses:
+                end_frame = empty_prediction_buffer[0] if empty_prediction_buffer else filename
+                print(f"[END] Match likely ended at frame {end_frame} (via combined condition)")
+                break
 
         except Exception as e:
-            print(f"[WARN] Failed to process {filename}: {e}")
+            print(f"[SKIP] Frame {filename}: {e}")
+            continue
+
+    results_dict["__meta__"] = {
+        "start_frame": start_frame,
+        "end_frame": end_frame if end_frame else frame_files[-1]
+    }
 
     with open(os.path.join(CONFIG_DIR, "results.json"), "w") as f:
         json.dump(results_dict, f, indent=2)
@@ -143,4 +169,3 @@ if __name__ == "__main__":
     print("[INFO] Processing frames...")
     process_frames()
     print(f"[DONE] Saved minimap to {MINIMAP_POS_DIR} and results to results.json")
-    #print(f"[DONE] Annotated frames saved to {ANNOTATED_DIR}")
