@@ -8,20 +8,43 @@ import base64
 
 # ---- CONFIG ---- #
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-RESULTS_PATH = os.path.join(SCRIPT_DIR, "results.json")
-WEBDATA_DIR = os.path.join(SCRIPT_DIR, "webdata")
+DATA_DIR = os.path.join(SCRIPT_DIR, "data")
+RESULTS_PATH = os.path.join(DATA_DIR, "results.json")
+WEBDATA_DIR = os.path.join(DATA_DIR, "webdata")
 ITEM_CSV = os.path.join(WEBDATA_DIR, "player_item_build.csv")
 GOLD_CSV = os.path.join(WEBDATA_DIR, "gold_difference_timeline.csv")
-MINIMAP_PATH = os.path.join(SCRIPT_DIR, "minimap.png")
+MINIMAP_PATH = os.path.join(DATA_DIR, "minimap.png")
 CHAMPION_DIR = os.path.join(SCRIPT_DIR, "..", "champions")
-MINIMAP_POSITION = os.path.join(SCRIPT_DIR, "minimap_position")
+MINIMAP_POSITION = os.path.join(DATA_DIR, "minimap_position")
 PINGS_DIR = os.path.join(SCRIPT_DIR, "..", "assets", "standard_pings")
-STYLE_PATH = os.path.join(SCRIPT_DIR, "style.css")
+STYLE_PATH = os.path.join(SCRIPT_DIR, "style", "style.css")
+# Open config file to display the URL
+with open("config.json") as f:
+    config = json.load(f)
+
+# Convert vod_timestamp to twitch-url format
+timestamp_ms = config['vod_timestamp']
+timestamp =  timestamp_ms // 1000
+h = timestamp // 3600
+m = (timestamp % 3600) // 60
+s = timestamp % 60
 
 # ---- Load Data ---- #
 with open(RESULTS_PATH, "r") as f:
     results = json.load(f)
 frame_files = sorted(results.keys())
+
+# ---- Filter by start/end frame from metadata ---- #
+meta = results.get("__meta__", {})
+start_frame = meta.get("start_frame")
+end_frame = meta.get("end_frame")
+
+if start_frame and end_frame and start_frame in frame_files and end_frame in frame_files:
+    start_index = frame_files.index(start_frame)
+    end_index = frame_files.index(end_frame)
+    frame_files = frame_files[start_index:end_index + 1]
+else:
+    st.warning("Start or end frame not found in results.json — displaying full timeline.")
 
 # Convert MM:SS timestamps to seconds
 def mmss_to_seconds(ts):
@@ -48,6 +71,8 @@ if 'timestamp' in gold_df.columns:
 # ---- Streamlit UI ---- #
 st.set_page_config(page_title="Prediction Viewer", layout="wide")
 st.title("Minimap Prediction Viewer")
+st.page_link(config["match_url"], label="LeagueOfGraphs Data")
+st.page_link(f"https://www.twitch.tv/videos/{config['vod_id']}?t={h}h{m}m{s}s", label="Twtich VOD")
 
 #Load CSS
 with open(STYLE_PATH, "r") as f:
@@ -90,7 +115,7 @@ with right_col:
     timestamp = data.get("timestamp", "Unknown")
 
     base64_image = image_to_base64(MINIMAP_PATH)
-    html = f"<div class='container'><img src='data:image/png;base64,{base64_image}' width='640'>"
+    html = f"<div class='container'style=width:640px; position: relative;><img src='data:image/png;base64,{base64_image}' width='640'>"
 
     with st.expander("Display Filters", expanded=True):
         show_champions = st.checkbox("Show Champions", value=True)
@@ -148,7 +173,7 @@ with left_col:
     with st.container(height=640):
         event_log = []
 
-        item_events = item_df[item_df['timestamp'] <= seconds]  # or any condition
+        item_events = item_df
 
         if not item_events.empty:
             for _, row in item_events.iterrows():

@@ -5,14 +5,19 @@ import subprocess
 from ultralytics import YOLO
 from PIL import Image as PILImage
 import numpy as np
+import json
+
+with open("config.json") as f:
+    config = json.load(f)
 
 # ---- CONFIGURATION ---- #
-CONFIG_DIR = "run_video_data"
-VIDEO_PATH = os.path.join("H:/TwitchDownloaderCLI/Videos/video_3.mp4")
-TEMPLATE_PATH = os.path.join(CONFIG_DIR, "minimap.png")
-MODEL_PATH = os.path.join(CONFIG_DIR, "best.pt")
-FRAMES_DIR = os.path.join(CONFIG_DIR, "frames")
-MINIMAP_POS_DIR = os.path.join(CONFIG_DIR, "minimap_position")
+CONFIG_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(CONFIG_DIR, "data")
+VIDEO_PATH = config["video_path"]
+TEMPLATE_PATH = os.path.join(DATA_DIR, "minimap.png")
+MODEL_PATH = os.path.join(DATA_DIR, "best.pt")
+FRAMES_DIR = os.path.join(DATA_DIR, "frames")
+MINIMAP_POS_DIR = os.path.join(DATA_DIR, "minimap_position")
 FPS = 2  # reduced frames per second to limit data
 CONFIDENCE_THRESHOLD = 0.65  # minimum confidence to include a prediction
 FRAME_SKIP = 2  # process every Nth frame to reduce output
@@ -160,10 +165,12 @@ def process_frames():
         "end_frame": end_frame if end_frame else frame_files[-1]
     }
 
-    with open(os.path.join(CONFIG_DIR, "results.json"), "w") as f:
+    with open(os.path.join(DATA_DIR, "results.json"), "w") as f:
         json.dump(results_dict, f, indent=2)
 
 if __name__ == "__main__":
+    if not os.path.exists(VIDEO_PATH):
+        raise FileNotFoundError(f"[ERROR] Video file not found at: {VIDEO_PATH}")
     print("[INFO] Extracting frames...")
     extract_frames(VIDEO_PATH, FRAMES_DIR, FPS)
     print("[INFO] Processing frames...")

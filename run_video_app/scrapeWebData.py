@@ -3,6 +3,11 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import os
 import subprocess
+import json
+
+config_path = os.path.join(os.path.dirname(__file__), "config.json")
+with open(config_path, "r") as f:
+    config = json.load(f)
 
 def extract_item_build_timeline(soup, participant_id):
     participant_items = []
@@ -58,9 +63,7 @@ def extract_runes_from_table(soup, participant_id):
 def extract_twitch_vod_info(soup):
     link = soup.find("a", class_="twitchSpectatePopupLink", attrs={"data-rel": "twitchSpectatePopup"})
     if link:
-        raw_timestamp = int(link.get("data-video-timestamp"))
-        # Convert from milliseconds to seconds
-        timestamp = raw_timestamp // 1000
+        timestamp = int(link.get("data-video-timestamp"))
         return {
             "vod_id": link.get("data-video-id"),
             "timestamp": timestamp
@@ -98,8 +101,9 @@ def download_vod_clip(vod_id, start_seconds, duration, output_path="video_clip.m
     print(f"VOD clip saved as: {output_path}")
 
 def main():
-    url = "https://www.leagueofgraphs.com/match/euw/7360565181#participant8"
+    url = config["match_url"]
     participant_id = url.split("#")[-1]
+    video_output_path = config["video_path"]
 
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
@@ -114,11 +118,11 @@ def main():
         gold_df = extract_gold_difference_timeline(soup)
         runes_df = extract_runes_from_table(soup, participant_id)
 
-        os.makedirs('webdata', exist_ok=True)
+        os.makedirs('data/webdata', exist_ok=True)
 
-        item_df.to_csv("webdata/player_item_build.csv", index=False)
-        gold_df.to_csv("webdata/gold_difference_timeline.csv", index=False)
-        runes_df.to_csv("webdata/runes.csv", index=False)
+        item_df.to_csv("data/webdata/player_item_build.csv", index=False)
+        gold_df.to_csv("data/webdata/gold_difference_timeline.csv", index=False)
+        runes_df.to_csv("data/webdata/runes.csv", index=False)
 
         print("Data extracted and saved to 'webdata/'!")
 
@@ -126,11 +130,18 @@ def main():
         vod_info = extract_twitch_vod_info(soup)
         game_duration = extract_game_duration_seconds(soup)
         if vod_info:
+            # Save VOD ID to config.json
+            config["vod_id"] = vod_info["vod_id"]
+            config["vod_timestamp"] = vod_info["timestamp"] + 30000
+            with open(config_path, "w") as f:
+                json.dump(config, f, indent=4)
+
+            #Download VOD
             download_vod_clip(
                 vod_id = vod_info["vod_id"],
                 start_seconds = (vod_info["timestamp"]),
-                duration = (game_duration),
-                output_path = "H:/TwitchDownloaderCLI/Videos/video.mp4"
+                duration = game_duration,
+                output_path = video_output_path
             )
         else:
             print("No Twitch VOD info found in page.")
