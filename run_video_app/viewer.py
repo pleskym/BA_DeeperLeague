@@ -13,6 +13,7 @@ STYLE_PATH = os.path.join(SCRIPT_DIR, "style", "style.css")
 CHAMPION_DIR = os.path.join(SCRIPT_DIR, "..", "champions")
 PINGS_DIR = os.path.join(SCRIPT_DIR, "..", "assets", "standard_pings")
 MATCHES_DIR = os.path.join(SCRIPT_DIR, "data")
+CONFIGS_PATH = os.path.join(SCRIPT_DIR, "configs")
 # Let user choose a match folder
 available_matches = sorted([d for d in os.listdir(MATCHES_DIR) if d.startswith("match_")])
 selected_match = st.selectbox("Select a match", available_matches)
@@ -20,7 +21,7 @@ DATA_DIR = os.path.join(MATCHES_DIR, selected_match)
 
 # Load config based on selected match
 match_id = selected_match.split("_")[1]
-config_path = os.path.join("configs", f"config_{match_id}.json")
+config_path = os.path.join(CONFIGS_PATH, f"config_{match_id}.json")
 with open(config_path) as f:
     config = json.load(f)
 
