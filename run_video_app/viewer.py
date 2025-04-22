@@ -12,11 +12,11 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 STYLE_PATH = os.path.join(SCRIPT_DIR, "style", "style.css")
 CHAMPION_DIR = os.path.join(SCRIPT_DIR, "..", "champions")
 PINGS_DIR = os.path.join(SCRIPT_DIR, "..", "assets", "standard_pings")
-
+MATCHES_DIR = os.path.join(SCRIPT_DIR, "data")
 # Let user choose a match folder
-available_matches = sorted([d for d in os.listdir("data") if d.startswith("match_")])
+available_matches = sorted([d for d in os.listdir(MATCHES_DIR) if d.startswith("match_")])
 selected_match = st.selectbox("Select a match", available_matches)
-DATA_DIR = os.path.join("data", selected_match)
+DATA_DIR = os.path.join(MATCHES_DIR, selected_match)
 
 # Load config based on selected match
 match_id = selected_match.split("_")[1]
