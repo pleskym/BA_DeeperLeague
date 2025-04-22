@@ -4,7 +4,7 @@
     justify-content: center;
 }
 .block-container {
-    max-width: 60%;  /* optional: limit width */
+    width: 80%;
     margin: 50 auto;
 }
 
@@ -12,6 +12,7 @@
     position: relative;
     display: inline-block;
 }
+
 .icon {
     position: absolute;
     width: 40px;
@@ -35,4 +36,13 @@
     font-size: 12px;
     border-radius: 4px;
     white-space: nowrap;
+}
+
+.icon.blue-team {
+    border: 3px solid #00b2f8;
+    border-radius: 9999px;
+}
+.icon.red-team {
+    border: 3px solid #922b32;
+    border-radius: 9999px;
 }

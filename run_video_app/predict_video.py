@@ -2,26 +2,30 @@ import os
 import cv2
 import json
 import subprocess
-from ultralytics import YOLO
+from ultralytics import YOLO # type: ignore
 from PIL import Image as PILImage
-import numpy as np
 import json
-
-with open("config.json") as f:
-    config = json.load(f)
+import sys
 
 # ---- CONFIGURATION ---- #
-CONFIG_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(CONFIG_DIR, "data")
-VIDEO_PATH = config["video_path"]
-TEMPLATE_PATH = os.path.join(DATA_DIR, "minimap.png")
-MODEL_PATH = os.path.join(DATA_DIR, "best.pt")
-FRAMES_DIR = os.path.join(DATA_DIR, "frames")
-MINIMAP_POS_DIR = os.path.join(DATA_DIR, "minimap_position")
+config_path = sys.argv[1] if len(sys.argv) > 1 else "config.json"
+with open(config_path) as f:
+    config = json.load(f)
+
+match_id = config["match_url"].split("/")[-1].split("#")[0]
+CONFIG_DIR = os.path.join("data", f"match_{match_id}")
+VIDEO_PATH = os.path.join(CONFIG_DIR, "video.mp4")
+TEMPLATE_PATH = os.path.join(CONFIG_DIR, "minimap.png")
+FRAMES_DIR = os.path.join(CONFIG_DIR, "frames")
+MINIMAP_POS_DIR = os.path.join(CONFIG_DIR, "minimap_position")
+
+MODEL_PATH = "data/best.pt"
+
+# Video extraction settings
 FPS = 2  # reduced frames per second to limit data
 CONFIDENCE_THRESHOLD = 0.65  # minimum confidence to include a prediction
 FRAME_SKIP = 2  # process every Nth frame to reduce output
-MINIMAP_SCORE_THRESHOLD = 40000  # Mindestfläche als Score für gültige Minimap-Erkennung
+MINIMAP_SCORE_THRESHOLD = 75000  # Mindestfläche als Score für gültige Minimap-Erkennung
 
 os.makedirs(FRAMES_DIR, exist_ok=True)
 os.makedirs(MINIMAP_POS_DIR, exist_ok=True)
@@ -39,8 +43,8 @@ def extract_frames(video_path, output_folder, fps=FPS):
 def detect_minimap(image):
     image_height, image_width = image.shape[:2]
 
-    roi_width = int(image_width * 0.3)
-    roi_height = int(image_height * 0.3)
+    roi_width = int(image_width * 0.4)
+    roi_height = int(image_height * 0.4)
     roi_x = image_width - roi_width
     roi_y = image_height - roi_height
 
@@ -165,7 +169,7 @@ def process_frames():
         "end_frame": end_frame if end_frame else frame_files[-1]
     }
 
-    with open(os.path.join(DATA_DIR, "results.json"), "w") as f:
+    with open(os.path.join(CONFIG_DIR, "results.json"), "w") as f:
         json.dump(results_dict, f, indent=2)
 
 if __name__ == "__main__":

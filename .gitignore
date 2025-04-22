@@ -5,7 +5,8 @@ venv
 runs
 run_video_data/video.mp4
 run_video_data/frames/
-run_video_app/data/frames
+run_video_app/data/*/frames
 run_video_app/data/video.mp4
+*.mp4
 circle.png
 yolo11n.pt

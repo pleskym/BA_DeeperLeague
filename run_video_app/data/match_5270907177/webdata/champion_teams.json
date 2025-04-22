@@ -1,0 +1,42 @@
+[
+  {
+    "champion": "Rumble",
+    "team": "blue"
+  },
+  {
+    "champion": "Udyr",
+    "team": "blue"
+  },
+  {
+    "champion": "Pantheon",
+    "team": "blue"
+  },
+  {
+    "champion": "Mel",
+    "team": "blue"
+  },
+  {
+    "champion": "Alistar",
+    "team": "blue"
+  },
+  {
+    "champion": "Garen",
+    "team": "red"
+  },
+  {
+    "champion": "Shaco",
+    "team": "red"
+  },
+  {
+    "champion": "Galio",
+    "team": "red"
+  },
+  {
+    "champion": "Vayne",
+    "team": "red"
+  },
+  {
+    "champion": "Lulu",
+    "team": "red"
+  }
+]

@@ -6,20 +6,22 @@ from PIL import Image
 import os
 import base64
 
-# ---- CONFIG ---- #
+st.set_page_config(page_title="Prediction Viewer", layout="wide")
+# ---- CONFIG: Match Selection ---- #
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(SCRIPT_DIR, "data")
-RESULTS_PATH = os.path.join(DATA_DIR, "results.json")
-WEBDATA_DIR = os.path.join(DATA_DIR, "webdata")
-ITEM_CSV = os.path.join(WEBDATA_DIR, "player_item_build.csv")
-GOLD_CSV = os.path.join(WEBDATA_DIR, "gold_difference_timeline.csv")
-MINIMAP_PATH = os.path.join(DATA_DIR, "minimap.png")
-CHAMPION_DIR = os.path.join(SCRIPT_DIR, "..", "champions")
-MINIMAP_POSITION = os.path.join(DATA_DIR, "minimap_position")
-PINGS_DIR = os.path.join(SCRIPT_DIR, "..", "assets", "standard_pings")
 STYLE_PATH = os.path.join(SCRIPT_DIR, "style", "style.css")
-# Open config file to display the URL
-with open("config.json") as f:
+CHAMPION_DIR = os.path.join(SCRIPT_DIR, "..", "champions")
+PINGS_DIR = os.path.join(SCRIPT_DIR, "..", "assets", "standard_pings")
+
+# Let user choose a match folder
+available_matches = sorted([d for d in os.listdir("data") if d.startswith("match_")])
+selected_match = st.selectbox("Select a match", available_matches)
+DATA_DIR = os.path.join("data", selected_match)
+
+# Load config based on selected match
+match_id = selected_match.split("_")[1]
+config_path = os.path.join("configs", f"config_{match_id}.json")
+with open(config_path) as f:
     config = json.load(f)
 
 # Convert vod_timestamp to twitch-url format
@@ -29,10 +31,23 @@ h = timestamp // 3600
 m = (timestamp % 3600) // 60
 s = timestamp % 60
 
+# ---- Paths ---- #
+RESULTS_PATH = os.path.join(DATA_DIR, "results.json")
+WEBDATA_DIR = os.path.join(DATA_DIR, "webdata")
+ITEM_CSV = os.path.join(WEBDATA_DIR, "player_item_build.csv")
+GOLD_CSV = os.path.join(WEBDATA_DIR, "gold_difference_timeline.csv")
+CHAMPION_TEAMS_JSON = os.path.join(WEBDATA_DIR, "champion_teams.json")
+MINIMAP_PATH = os.path.join(DATA_DIR, "..", "minimap.png")
+MINIMAP_POSITION = os.path.join(DATA_DIR, "minimap_position")
+
 # ---- Load Data ---- #
 with open(RESULTS_PATH, "r") as f:
     results = json.load(f)
+
 frame_files = sorted(results.keys())
+
+with open(os.path.join(WEBDATA_DIR, "champion_teams.json")) as f:
+    champion_team_map = {c["champion"]: c["team"] for c in json.load(f)}
 
 # ---- Filter by start/end frame from metadata ---- #
 meta = results.get("__meta__", {})
@@ -53,34 +68,31 @@ def mmss_to_seconds(ts):
         return minutes * 60 + seconds
     except:
         return None
-
+    
+# ---- Dataframes ---- #
 item_df = pd.read_csv(ITEM_CSV)
-#Transfrom item timestamps
-if 'timestamp' in item_df.columns:
+if 'timestamp' in item_df.columns: #Transfrom item timestamps
     item_df['timestamp'] = item_df['timestamp'].apply(mmss_to_seconds)
     item_df = item_df.dropna(subset=['timestamp'])  # remove any malformed
     item_df['timestamp'] = item_df['timestamp'].astype(int)
 
 gold_df = pd.read_csv(GOLD_CSV)
-# Convert 'timestamp' from minutes to seconds for alignment
-if 'timestamp' in gold_df.columns:
+if 'timestamp' in gold_df.columns: # Convert 'timestamp' from minutes to seconds for alignment
     gold_df['timestamp'] = pd.to_numeric(gold_df['timestamp'], errors='coerce')  # handle any non-numeric gracefully
     gold_df = gold_df.dropna(subset=['timestamp'])  # remove rows with invalid timestamps
     gold_df['timestamp'] = gold_df['timestamp'].astype(int) * 60
 
 # ---- Streamlit UI ---- #
-st.set_page_config(page_title="Prediction Viewer", layout="wide")
+st.markdown("---")
 st.title("Minimap Prediction Viewer")
-st.page_link(config["match_url"], label="LeagueOfGraphs Data")
-st.page_link(f"https://www.twitch.tv/videos/{config['vod_id']}?t={h}h{m}m{s}s", label="Twtich VOD")
 
-#Load CSS
+# ---- Load CSS ---- #
 with open(STYLE_PATH, "r") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # Load the static minimap image to get its display size
 image = Image.open(MINIMAP_PATH)
-image_width, image_height = image.size  # displayed size
+image_width, image_height = image.size
 
 # Load the first annotated frame to get the original minimap size
 if os.path.exists(MINIMAP_POSITION):
@@ -103,9 +115,13 @@ frame_index = st.session_state.frame_index
 selected_frame = frame_files[frame_index]
 
 # Layout with 2 columns
-left_col, right_col = st.columns([1, 2])
+left_col, spacer, right_col = st.columns([2,0.2,2])
 
 with right_col:
+    st.subheader("LegaueOfGraphs-URL and the Twtich-VOD:")
+    st.page_link(config["match_url"], label="LeagueOfGraphs Data")
+    st.page_link(f"https://www.twitch.tv/videos/{config['vod_id']}?t={h}h{m}m{s}s", label="Twtich VOD")
+    st.markdown("---")
     def image_to_base64(path):
         with open(path, "rb") as img_file:
             return base64.b64encode(img_file.read()).decode()
@@ -133,8 +149,10 @@ with right_col:
         
         if os.path.exists(icon_path):
             if show_champions:
+                team = champion_team_map.get(name, "unknown")
+                team_class = "blue-team" if team == "blue" else "red-team"
                 base64_icon = image_to_base64(icon_path)
-                html += f"<img class='icon icon-hover' src='data:image/png;base64,{base64_icon}' style='left:{scaled_x}px;top:{scaled_y}px;' data-label='{name} ({conf:.2f})'>"
+                html += f"<img class='icon icon-hover {team_class}' src='data:image/png;base64,{base64_icon}' style='left:{scaled_x}px;top:{scaled_y}px;' data-label='{name} ({conf:.2f})'>"
             else:
                 continue
         elif os.path.exists(ping_path):
@@ -168,9 +186,13 @@ with left_col:
 
     # Display as table
     st.dataframe(pd.DataFrame(table_data), hide_index=True)
-
+    
+    # Gold Graph
+    gold_graph = pd.read_csv(GOLD_CSV)
+    st.line_chart(gold_graph, x="timestamp", y="gold_diff",x_label="Minutes", y_label="")
+    
     st.markdown("### Event Log")
-    with st.container(height=640):
+    with st.container(height=450):
         event_log = []
 
         item_events = item_df

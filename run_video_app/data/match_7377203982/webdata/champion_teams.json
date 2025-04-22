@@ -1,0 +1,42 @@
+[
+  {
+    "champion": "Ambessa",
+    "team": "blue"
+  },
+  {
+    "champion": "Ekko",
+    "team": "blue"
+  },
+  {
+    "champion": "Akshan",
+    "team": "blue"
+  },
+  {
+    "champion": "Corki",
+    "team": "blue"
+  },
+  {
+    "champion": "Bard",
+    "team": "blue"
+  },
+  {
+    "champion": "Akali",
+    "team": "red"
+  },
+  {
+    "champion": "Lee Sin",
+    "team": "red"
+  },
+  {
+    "champion": "Zed",
+    "team": "red"
+  },
+  {
+    "champion": "Anivia",
+    "team": "red"
+  },
+  {
+    "champion": "Rell",
+    "team": "red"
+  }
+]

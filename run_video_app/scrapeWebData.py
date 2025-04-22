@@ -4,9 +4,10 @@ import pandas as pd
 import os
 import subprocess
 import json
+import sys
 
-config_path = os.path.join(os.path.dirname(__file__), "config.json")
-with open(config_path, "r") as f:
+config_path = sys.argv[1] if len(sys.argv) > 1 else "config.json"
+with open(config_path) as f:
     config = json.load(f)
 
 def extract_item_build_timeline(soup, participant_id):
@@ -66,44 +67,57 @@ def extract_twitch_vod_info(soup):
         timestamp = int(link.get("data-video-timestamp"))
         return {
             "vod_id": link.get("data-video-id"),
-            "timestamp": timestamp
+            "timestamp": timestamp + 30000
         }
     return None
 
-def convert_seconds_to_hms(seconds):
-    h = seconds // 3600
-    m = (seconds % 3600) // 60
-    s = seconds % 60
+def convert_milliseconds_to_hms(ms):
+    total_seconds = ms // 1000
+    h, remainder = divmod(total_seconds, 3600)
+    m, s = divmod(remainder, 60)
+
     return f"{h:02}:{m:02}:{s:02}"
 
-def extract_game_duration_seconds(soup):
+def extract_game_duration_ms(soup):
     duration_tag = soup.find("span", class_="gameDuration")
     if duration_tag:
         time_str = duration_tag.text.strip().strip("()")  # remove parentheses
         if ":" in time_str:
             mins, secs = map(int, time_str.split(":"))
-            return mins * 60 + secs
+            print("Minutes: ", mins, "Seconds: ", secs) 
+            return (mins * 60 + secs) * 1000
     return 1800  # fallback if not found
 
-def download_vod_clip(vod_id, start_seconds, duration, output_path="video_clip.mp4", buffer_seconds=30):
-    start_seconds = start_seconds + 30 # Matches start 30 seconds later from timestamp in LeageuOfGraphs
-    end_seconds = start_seconds + duration + buffer_seconds
+def download_vod_clip(vod_id, start_ms, duration, output_path="video_clip.mp4", buffer_ms=60000):
+    end_ms = start_ms + duration + buffer_ms
+    print("START SECONDS: ", start_ms)
     command = [
         "TwitchDownloaderCLI.exe",
         "videodownload",
         "--id", vod_id,
-        "-b", convert_seconds_to_hms(start_seconds),
-        "-e", convert_seconds_to_hms(end_seconds),
+        "-b", convert_milliseconds_to_hms(start_ms),
+        "-e", convert_milliseconds_to_hms(end_ms),
         "-o", output_path
     ]
     print("Running TwitchDownloaderCLI command:", " ".join(command))
     subprocess.run(command, check=True)
     print(f"VOD clip saved as: {output_path}")
 
+def extract_champion_teams(soup):
+    champions = []
+    tab_imgs = soup.select(".matchPlayersTabs .tab img")
+    
+    for img in tab_imgs:
+        champ = img.get("alt")
+        classes = img.get("class", [])
+        team = "blue" if "blueShadow" in classes else "red"
+        champions.append({"champion": champ, "team": team})
+    
+    return champions
+
 def main():
     url = config["match_url"]
     participant_id = url.split("#")[-1]
-    video_output_path = config["video_path"]
 
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
@@ -114,34 +128,47 @@ def main():
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, "html.parser")
 
+        # Make match specific folder
+        match_id = url.split("/")[-1].split("#")[0]
+        match_dir = os.path.join("data", f"match_{match_id}")
+        webdata_dir = os.path.join(match_dir, "webdata")
+        os.makedirs(webdata_dir, exist_ok=True)
+
+        # Video path
+        video_path = os.path.join(match_dir, "video.mp4")
+
         item_df = extract_item_build_timeline(soup, participant_id)
         gold_df = extract_gold_difference_timeline(soup)
         runes_df = extract_runes_from_table(soup, participant_id)
 
-        os.makedirs('data/webdata', exist_ok=True)
+        item_df.to_csv(os.path.join(webdata_dir, "player_item_build.csv"), index=False)
+        gold_df.to_csv(os.path.join(webdata_dir, "gold_difference_timeline.csv"), index=False)
+        runes_df.to_csv(os.path.join(webdata_dir, "runes.csv"), index=False)
 
-        item_df.to_csv("data/webdata/player_item_build.csv", index=False)
-        gold_df.to_csv("data/webdata/gold_difference_timeline.csv", index=False)
-        runes_df.to_csv("data/webdata/runes.csv", index=False)
-
-        print("Data extracted and saved to 'webdata/'!")
+        #Save champions per team
+        champion_team_data = extract_champion_teams(soup)
+        with open(os.path.join(webdata_dir, "champion_teams.json"), "w") as f:
+            json.dump(champion_team_data, f, indent=2)
+        
+        print("Data extracted and saved to the specific match 'webdata/'!")
 
         # Extract VOD info and download
         vod_info = extract_twitch_vod_info(soup)
-        game_duration = extract_game_duration_seconds(soup)
+        game_duration = extract_game_duration_ms(soup)
+        print("Game Duration: ", game_duration)
         if vod_info:
             # Save VOD ID to config.json
             config["vod_id"] = vod_info["vod_id"]
-            config["vod_timestamp"] = vod_info["timestamp"] + 30000
+            config["vod_timestamp"] = vod_info["timestamp"]
             with open(config_path, "w") as f:
                 json.dump(config, f, indent=4)
 
             #Download VOD
             download_vod_clip(
                 vod_id = vod_info["vod_id"],
-                start_seconds = (vod_info["timestamp"]),
+                start_ms = (vod_info["timestamp"]),
                 duration = game_duration,
-                output_path = video_output_path
+                output_path = video_path
             )
         else:
             print("No Twitch VOD info found in page.")
