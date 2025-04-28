@@ -1,42 +1,42 @@
 [
   {
-    "champion": "Rumble",
+    "champion": "Kled",
     "team": "blue"
   },
   {
-    "champion": "Udyr",
+    "champion": "Viego",
     "team": "blue"
   },
   {
-    "champion": "Pantheon",
+    "champion": "Sylas",
     "team": "blue"
   },
   {
-    "champion": "Mel",
+    "champion": "Ziggs",
     "team": "blue"
   },
   {
-    "champion": "Alistar",
+    "champion": "Rell",
     "team": "blue"
   },
   {
-    "champion": "Garen",
+    "champion": "Kennen",
     "team": "red"
   },
   {
-    "champion": "Shaco",
+    "champion": "Hecarim",
     "team": "red"
   },
   {
-    "champion": "Galio",
+    "champion": "Akali",
     "team": "red"
   },
   {
-    "champion": "Vayne",
+    "champion": "Jhin",
     "team": "red"
   },
   {
-    "champion": "Lulu",
+    "champion": "Janna",
     "team": "red"
   }
 ]

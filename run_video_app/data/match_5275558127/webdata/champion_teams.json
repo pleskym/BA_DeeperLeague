@@ -1,0 +1,42 @@
+[
+  {
+    "champion": "Ambessa",
+    "team": "blue"
+  },
+  {
+    "champion": "Fiddlesticks",
+    "team": "blue"
+  },
+  {
+    "champion": "Zed",
+    "team": "blue"
+  },
+  {
+    "champion": "Sivir",
+    "team": "blue"
+  },
+  {
+    "champion": "Gragas",
+    "team": "blue"
+  },
+  {
+    "champion": "Gangplank",
+    "team": "red"
+  },
+  {
+    "champion": "Naafiri",
+    "team": "red"
+  },
+  {
+    "champion": "Sylas",
+    "team": "red"
+  },
+  {
+    "champion": "Jhin",
+    "team": "red"
+  },
+  {
+    "champion": "Alistar",
+    "team": "red"
+  }
+]

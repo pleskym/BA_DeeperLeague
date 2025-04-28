@@ -5,6 +5,7 @@ import pandas as pd
 from PIL import Image
 import os
 import base64
+import re
 
 st.set_page_config(page_title="Prediction Viewer", layout="wide")
 # ---- CONFIG: Match Selection ---- #
@@ -14,10 +15,18 @@ CHAMPION_DIR = os.path.join(SCRIPT_DIR, "..", "champions")
 PINGS_DIR = os.path.join(SCRIPT_DIR, "..", "assets", "standard_pings")
 MATCHES_DIR = os.path.join(SCRIPT_DIR, "data")
 CONFIGS_PATH = os.path.join(SCRIPT_DIR, "configs")
-# Let user choose a match folder
-available_matches = sorted([d for d in os.listdir(MATCHES_DIR) if d.startswith("match_")])
+available_matches = sorted([d for d in os.listdir(MATCHES_DIR) if d.startswith("match_")]) # Let user choose a match folder
 selected_match = st.selectbox("Select a match", available_matches)
 DATA_DIR = os.path.join(MATCHES_DIR, selected_match)
+# ---- Paths ---- #
+RESULTS_PATH = os.path.join(DATA_DIR, "results.json")
+WEBDATA_DIR = os.path.join(DATA_DIR, "webdata")
+ITEM_CSV = os.path.join(WEBDATA_DIR, "player_item_build.csv")
+GOLD_CSV = os.path.join(WEBDATA_DIR, "gold_difference_timeline.csv")
+CHAMPION_TEAMS_JSON = os.path.join(WEBDATA_DIR, "champion_teams.json")
+MINIMAP_PATH = os.path.join(DATA_DIR, "..", "minimap.png")
+MINIMAP_POSITION = os.path.join(DATA_DIR, "minimap_position")
+CHAT_DIR = os.path.join(DATA_DIR, "chat_text")
 
 # Load config based on selected match
 match_id = selected_match.split("_")[1]
@@ -32,23 +41,39 @@ h = timestamp // 3600
 m = (timestamp % 3600) // 60
 s = timestamp % 60
 
-# ---- Paths ---- #
-RESULTS_PATH = os.path.join(DATA_DIR, "results.json")
-WEBDATA_DIR = os.path.join(DATA_DIR, "webdata")
-ITEM_CSV = os.path.join(WEBDATA_DIR, "player_item_build.csv")
-GOLD_CSV = os.path.join(WEBDATA_DIR, "gold_difference_timeline.csv")
-CHAMPION_TEAMS_JSON = os.path.join(WEBDATA_DIR, "champion_teams.json")
-MINIMAP_PATH = os.path.join(DATA_DIR, "..", "minimap.png")
-MINIMAP_POSITION = os.path.join(DATA_DIR, "minimap_position")
-
 # ---- Load Data ---- #
 with open(RESULTS_PATH, "r") as f:
     results = json.load(f)
 
 frame_files = sorted(results.keys())
 
+# ---- Team color ---- #
 with open(os.path.join(WEBDATA_DIR, "champion_teams.json")) as f:
     champion_team_map = {c["champion"]: c["team"] for c in json.load(f)}
+
+event_log = []
+# ---- Clean Chat-Textfile ---- #
+if os.path.exists(CHAT_DIR):
+    chat_files = sorted([f for f in os.listdir(CHAT_DIR) if f.endswith(".txt")])
+    if chat_files:
+        first_chat_file = chat_files[0]
+        chat_path = os.path.join(CHAT_DIR, first_chat_file)
+
+        with open(chat_path, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+            lines = lines[1:]  # Skip header
+            for line in lines:
+                line = line.strip()
+                import re
+                match = re.match(r"^(\d{2}[:.]\d{2})\s+(.*?),", line)
+                if match:
+                    timestamp = match.group(1).replace(".", ":")
+                    text = match.group(2).strip()
+                    event_log.append({"timestamp": timestamp, "text": text})
+    else:
+        st.error("No chat text file found in chat_text folder.")
+else:
+    st.error("chat_text folder does not exist!")
 
 # ---- Filter by start/end frame from metadata ---- #
 meta = results.get("__meta__", {})
@@ -119,7 +144,7 @@ selected_frame = frame_files[frame_index]
 left_col, spacer, right_col = st.columns([2,0.2,2])
 
 with right_col:
-    st.subheader("LegaueOfGraphs-URL and the Twtich-VOD:")
+    st.subheader("LegaueOfGraphs-URL and the Twitch-VOD:")
     st.page_link(config["match_url"], label="LeagueOfGraphs Data")
     st.page_link(f"https://www.twitch.tv/videos/{config['vod_id']}?t={h}h{m}m{s}s", label="Twtich VOD")
     st.markdown("---")
@@ -193,20 +218,38 @@ with left_col:
     st.line_chart(gold_graph, x="timestamp", y="gold_diff",x_label="Minutes", y_label="")
     
     st.markdown("### Event Log")
+    # ---- Prepare unified event log ---- #
+    full_event_log = []
+
+    # Add item purchases
+    if not item_df.empty:
+        for _, row in item_df.iterrows():
+            if pd.notnull(row['timestamp']):
+                full_event_log.append({
+                    "time_seconds": int(row['timestamp']),
+                    "text": f"Player bought {row['item_name']}"
+                })
+
+    # Add chat events
+    for event in event_log:
+        if "timestamp" in event and "text" in event:
+            minutes, seconds = map(int, event["timestamp"].split(":"))
+            total_seconds = minutes * 60 + seconds
+            full_event_log.append({
+                "time_seconds": total_seconds,
+                "text": event["text"]
+            })
+
+    # Sort all events by time
+    full_event_log = sorted(full_event_log, key=lambda x: x["time_seconds"])
+
+    # Display event log
     with st.container(height=450):
-        event_log = []
-
-        item_events = item_df
-
-        if not item_events.empty:
-            for _, row in item_events.iterrows():
-                mm = row['timestamp'] // 60
-                ss = row['timestamp'] % 60
-                event_log.append(f"[{mm:02}:{ss:02}]: Player bought {row['item_name']}")
-
-        if event_log:
-            for event in event_log:
-                st.markdown(event)
+        if full_event_log:
+            for event in full_event_log:
+                mm = event["time_seconds"] // 60
+                ss = event["time_seconds"] % 60
+                st.markdown(f"[{mm:02}:{ss:02}]: {event['text']}")
         else:
             st.write("No events at this time.")
 

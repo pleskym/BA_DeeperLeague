@@ -25,7 +25,7 @@ MODEL_PATH = "data/best.pt"
 FPS = 2  # reduced frames per second to limit data
 CONFIDENCE_THRESHOLD = 0.65  # minimum confidence to include a prediction
 FRAME_SKIP = 2  # process every Nth frame to reduce output
-MINIMAP_SCORE_THRESHOLD = 75000  # Mindestfläche als Score für gültige Minimap-Erkennung
+MINIMAP_SCORE_THRESHOLD = 80000  # Mindestfläche als Score für gültige Minimap-Erkennung
 
 os.makedirs(FRAMES_DIR, exist_ok=True)
 os.makedirs(MINIMAP_POS_DIR, exist_ok=True)
@@ -43,8 +43,8 @@ def extract_frames(video_path, output_folder, fps=FPS):
 def detect_minimap(image):
     image_height, image_width = image.shape[:2]
 
-    roi_width = int(image_width * 0.4)
-    roi_height = int(image_height * 0.4)
+    roi_width = int(image_width * 0.35)
+    roi_height = int(image_height * 0.35)
     roi_x = image_width - roi_width
     roi_y = image_height - roi_height
 
@@ -104,9 +104,9 @@ def process_frames():
     end_frame = None
     start_frame_index = 0
     miss_counter = 0
-    max_consecutive_misses = 5
+    max_consecutive_misses = 15
     prediction_miss_counter = 0
-    max_prediction_misses = 5
+    max_prediction_misses = 15
     empty_prediction_buffer = []
 
     for i, filename in enumerate(frame_files):

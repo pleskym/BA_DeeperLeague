@@ -1,0 +1,1520 @@
+text,first_frame
+Free,300
+400 450 450 450 450 45C,300
+BASIC,300
+75,300
+250 250 300 350 400 40C,300
+EPIC,300
+775 800 1000 1050 1100 115,300
+LEGENDARY,300
+3 2500 2500 2700 2800 2900 300,300
+%,300
+30oo 3100 3100 3200 3200,300
+SELL UNDO 500,300
+0/0/0,600
+Type {help for a list of commands,2700
+00.51 Caesar (Sylas) has targered Isles - (Gragas),2700
+00.51 Caesar (Sylas) has targered Isles - ((ragas),3000
+philip,5400
+21,6000
+403,6000
+00.51 Caesar (Sylas) has targered Isles (Gragas),6600
+01.53 ASTROBOY99 (Naafiri) signals enemy has vision here,6600
+RobbyBob,9000
+27,9900
+Type Thelp for list of commands,9900
+02.50 philip (Ambessa) has drawn first bloodl,9900
+02.54 Caesar (Sylas): Zed Ignice,10200
+Type Thelp for a list of commands,10500
+02.54 Caesar (Sylas): Zed Ignite,10500
+Type Jhelp - for a list of commands,10800
+00.51 Caesar (Sylas) has targeted Isles (Gragas),10800
+03.03 TacricalO (Jhin) signals chat enemies are missing,10800
+03.08 Caesar (Sylas) purchased Dark Seal,11100
+12 1/0/0,12000
+20 0/0/0,12000
+23 0/0/0,12000
+00.51 Caesar (Sylas) has targeted Isles - (Gragas),12000
+01.53 ASTROBOY99 (Naafiri) signals enemy has vision he 2 0/0/0,12000
+02.50 phillp (Ambessa) has drawn first bloodl,12000
+03.24 ASTROBOY99 (Naafiri) is on che way,12000
+03.26 ASTROBOY99 (Naafiri) signals chat enemies are missing,12000
+00.51 Caesar (Sylas) has cargeced Isles (Gragas),12300
+02.54 Caesar (Sylas): Zed Ignire,12600
+03.32 TacricalO (Jhin) signals chat enemies are missing,12600
+02.50 philip (Aubena) has drawn first bloodl,12900
+02.54 Caesar (Sylas}: Zed Iznite,12900
+03.03 TacricalO (Jhin) signals that enemies are missing,12900
+03.32 TacticalO (Jhin) signals chat enemies are missing,12900
+03.37 TacricalO (Jhin) signals to be caurious,12900
+03.24 ASTROBOY99 (Naafiri) is on the way,13200
+03.44 ASTROBOY99 (Naafiri) signals enemy has vision here,13200
+03.46 ASTROBOY99 (Naafiri) on che way,13200
+03.26 ASTROBOY99 (Naafiri) signals thar enemies are missing,13500
+03.32 TaccicalO (hin) signals that enemies are missing,13500
+03.37 Tacticall (Jhin) signals to be caurious,13500
+03.50 ASTROBOY99 (Naafiri) signals enemy has vision here,13500
+03.51 ASTROBOY99 (Naafiri) signals to be caurious,13500
+03.37 TacticalO (Jhin) signals to be caurious,13800
+03.46 ASTROBOY99 (Naafiri) on the way,13800
+03.54 ASTROBOY99 (Naafiri) signals enemy has vision here,13800
+03.55 Caesar (Sylas) asking for assistance,13800
+03.56 ASTROBOY99 (Naafiri) is on che way,13800
+03.46 ASTROBOY99 (Naafiri) is on the way,14100
+03.58 ASTROBOY99 (Naafiri) is on che way,14100
+04.01 TaccicalO (Jhin) on the way,14100
+03.56 ASTROBOY99 (Naafiri) is on the way,14400
+04.01 TacricalO (Jhin) on che way,14400
+04.02 Wekin Poof (Alistar) is on che way,14400
+04.02 ASTROBOY99 (Naafiri) signals to all in,14400
+04.05 ASTROBOY99 (Naafiri) signals to be caurious,14400
+04.05 Wekin Poof (Alisrar) signals chat enemies are missing,14400
+04.01 TacticalO (Jhin) is on the way,14700
+04.02 Wekin Poof (Alistar) on the way,14700
+04.05 Wekin Poof (Alistar) signals that enemies are missing,14700
+04.07 ASTROBOY99 (Naafiri) signals to be cautious,14700
+04.01 TacticalO (Jhin) on che way,15000
+04.02 ASTROBOY99 (Naafiri) signals o all in,15000
+04.05 Wekin Poof (Alistar) signals chat enemies are missing,15000
+04.02 Wekin Poof (Alistar) on che way,15300
+04.07 ASTROBOY99 (Naafiri) signals to be caucious,15300
+04.18 ASTROBOY99 (Naafiri) signals to be caurious,15300
+20 1/0/0,15600
+28 0/0/1,15600
+31,15600
+28 0/0/0,15600
+30 1/0/1,15600
+04.02 Wekin Poof (Alisrar) is on che way,15600
+04.02 ASTROBOY99 (Naafiri) signals to all in 1/0/1,15600
+04.05 ASTROBOY99 (Naafiri) signals to be cautious,15600
+04.05 Wekin Poof (Alistar) signals char enemies are missin,15600
+04.07 ASTROBOY99 (Naafiri) signals to be caurious,15600
+04.24 ASTROBOY99 (Naafiri): Fiddlescicks Flash,15600
+04.24 Enemy team has complered che Feat of Warfarel,15600
+04.24 Enemy ceam has complered the Feat of Warfarel,15900
+04.27 TacricalO (Jhin): Gragas Ignice,15900
+04.28 TacricalO (Jhin): Gragas Flash,15900
+1780,16200
+ASTROBOY99,16200
+39,16200
+87,16200
+04.05 Wekin Poof (Alisar) signals chat enemies are missing,16500
+04.24 ASTROBOY99 (Naafiri) cFiddileseieE; Flash,16500
+04.24 Enemy tean Irs compleced che Feat of WVarfarel,16500
+04.27 TacricalO (Jhinj: sragas Ignite,16500
+04.28 TacticalO (Jhin): Gragaz Flash,16500
+04.38 WVekn Pcof (Alistar): Grg Flash,16500
+04.24 Enemy team has complered the Fear of Warfarel,16800
+04.38 Wekin Poof (Alistar): Gragas Flash,16800
+04.41 Wekin Poof (Alistar) on the way,16800
+04.41 Wekn Poof (Aliscar) on che way,17400
+04.53 Caesar (Sylas) purchased Control Ward,17400
+04.41 Wekin Poof (Alistar) is on che way,19500
+05.28 TacricalO (Jhin) signals chat enemies are missing,19500
+05.29 TacricalO (Jhin) signals chat enemies are missing,19500
+05.28 TacricalO (Jhin) signals char enemies are missing,19800
+05.35 TaccicalO (Jhin): Sivir B: Sword,19800
+05.35 TacricalO (Jhin): Sivir B F Sword,19800
+05.35 TacticalO (Jhin): Sivir B F Sword,19800
+05.28 TacricalO (Jhin) signals that enemies are missing,20100
+05.35 TacricalO (Jhin): Sivir B Sword Zven,20100
+05.35 TaccicalO (Jhin): Sivir B Sword,20100
+05.35 TacricalO (Jhin): Sivir B F_ Sword,20100
+23 1/0/1,20700
+28 1/0/1,20700
+41 0/0/0,20700
+40 1/0/1,20700
+05.29 TacricalO (Jhin) signals chat enemies are missing 1/0/1,20700
+05.35 TacticalO (Jhin): Sivir B Sword,20700
+05.50 Caesar (Sylas) signals that enemies are missing,20700
+05.50 ASTROBOY99 (Naafiri) on the way,20700
+05.29 TacricalO (Jhin) signals char enemies are missing,21000
+05.50 Caesar (Sylas) signals chat enemies are missing,21000
+05.50 ASTROBOY99 (Naafiri) is on che way,21000
+05.35 TacricalO (Jhin): Sivir B Sword,21300
+05.35 TacticalO (hin): Sivir B F Sword,21300
+05.59 ASTROBOY99 (Naafiri) is on che way,21300
+05.59 ASTROBOY99 (Naafiri) on the way,21600
+06.03 ASTROBOY99 (Naafiri) on the way,21600
+26 1/0/1,22200
+42 0/0/0,22200
+47 1/0/1,22200
+1/0/1,22200
+[D] Smite,22500
+751,23400
+45,23400
+420,23400
+06.03 ASTROBOY99 (Naafiri) is on che way,23400
+06.35 Sylas has stolen Zed'$ ultimatel,23400
+05.35 TaccicalO (Jhin): Sfvii B Sword,23700
+05.50 Caesar (Sylas) signals thar enemies are missing,23700
+"06,03 ASTROBOY99 (Naafiri) on the way",23700
+06.35 Sylas has stolen Zed $ ulcimacel,23700
+06.39 ASTROBOY99 (Naafiri) signals chat enemies are missing,23700
+06.40 ASTROBOY99 (Naafiri) has slain che Voidgrubsl,23700
+05.35 TaccicalO (Jhin): Sivir B F Sword,24000
+05.50 ASTROBOY99 (Naafiri) on che way,24000
+06.35 Sylas has stolen Zed' $ ulcimacel,24000
+06.40 ASTROBOY99 (Naafiri) has slain che Voidgrubs!,24000
+06.48 Caesar (Sylas): Zed Flash,24300
+06.48 Caesar (Sylas}: Zed Flash,24300
+06.50 ASTROBOY99 (Naafiri) is on the way,24300
+23,24600
+06.35 Sylas has stolen Zed' $ ulcimatcel,24600
+06.52 [Team] Caesar (Sylas): 1140 mid,24600
+06.35 Sylas has stolen Zed'$ ulcimatel,24900
+06.50 ASTROBOY99 (Naafiri) is on che way,24900
+06.52 [Team] Caesar (Sylas): 140 mid,24900
+06.57 ASTROBOY99 (Naafiri) on the way,24900
+06.40 ASTROBOY99 (Naafiri) has slain the Voidgrubs!,25200
+07.02 ASTROBOY99 (Naafiri) signals chat enemies are missing,25200
+07.06 ASTROBOY99 (Naafiri) on the way,25200
+ALEX HO,25500
+968,25500
+06.50 ASTROBOY99 (Naafiri) on the way,25500
+07.08 ASTROBOY99 (Naafiri) is on the way,25500
+07.10 ASTROBOY99 (Naafiri) is on che way,25500
+07.10 ASTROBOY99 (Naafiri) signals chat enemies are missing,25500
+ALEX Hd,25800
+07.06 ASTROBOY99 (Naafiri) on the way 106,25800
+07.08 ASTROBOY99 (Naafiri) on the way,25800
+07.10 ASTROBOY99 (Naafiri) on the way,25800
+07.12 Caesar (Sylas) on the way,25800
+07.13 ASTROBOY99 (Naafiri) is on the way,25800
+07.15 ASTROBOY99 (Naafiri) has stolen the Infernal Drakel,25800
+07.16 ASTROBOY99 (Naafiri) signals to all in,25800
+07.08 ASTROBOY99 (Naafiri) is on che way,26100
+07.10 ASTROBOY99 (Naafiri) signals chat enemies are missing Zven,26100
+07.12 Caesar (Sylas) is on che way,26100
+07.17 Caesar (Sylas) on the way,26100
+ALEX Hc,26100
+Rol,26400
+Isles,26400
+Lveu,26400
+69,26400
+07.12 Caesar (Sylas) on che way,26400
+07.13 ASTROBOY99 (Naafiri) on the way,26400
+07.17 Caesar (Sylas) on che way,26400
+07.23 Caesar (Sylas) on the way,26400
+Caesar,26700
+07.23 Caesar (Sylas) on che way,26700
+07.29 ASTROBOY99 (Naafiri) has targered RobbyBob (Zed),26700
+07.29 Wekin Poof (Alliscur) 'urd Quest Completel Completion,26700
+Time: 7.29,26700
+07.31 Caesar (Sylas) signak to be caurious,26700
+Zven,26700
+07.29 ASTROBOY99 (Naafiri) has cargered RobbyBob (Zed),27000
+07.29 Wekin Poof (Aliscar) Ward Quest Complecel Complerion,27000
+Timel 7129,27000
+07.3| Caesar (Sylas) signals to be caurious,27000
+07.17 Caesar (Sylas) is on che way,27300
+07.29 Wekin Poof (Alistar) Ward Quest Completel Complecion,27300
+07.40 ASTROBOY99 (Naafiri) is on che way,27300
+07.40 Zven (Sivir) on 0 killing spreel,27300
+Caesar Isles,27600
+07.29 Wekin Poof (Alistar) Ward Quest Completel Completion,27600
+07.31 Caesar (Sylas) signals to be caurious,27600
+07.40 ASTROBOY99 (Naafiri) on the way,27600
+07.40 Zven (Sivir) on killing spreel,27600
+07.43 Wekin Poof (Alistar) purchased Control Ward,27600
+Level 60,27600
+"I10 628,985 pts",27600
+17894,27900
+"110 628,985 pts",27900
+400 450,28200
+EPIC H,28200
+07.29 ASTROBOY99 (Naafiri) has cargered RobbyBob (Zed) 3 2500 1625 1825 2800 2900 300,28200
+07.29 Wekin Poof (Aliscar) Ward Quest Complecel Completic,28200
+07.40 ASTROBOY99 (Naafiri) on the way 30o0 3100 3100 2325 3200,28200
+07.55 Wekin Poof (Aliscar) on che way SELL UNDO 1239,28200
+6 Kr,28200
+"Tlna 7,29",28500
+07.40 t {S@Irt on killing spreel,28500
+07.43 Wekin Pcof (Alistar) purchased Control Ward,28500
+07.55 Wekin Poof (Aliscar) on che way,28500
+07.57 Wekin Poof (Aliscar) is on the way,28500
+08.01 ASTROBOY99 (Naafiri) purchased Control Ward,28500
+07.55 Wekin Poof (Alisrar) is on che way,28800
+07.57 Wekin Poof (Aliscar) is on che way,28800
+08.06 Sylas has stolen Gragas'$ ulcimatel,28800
+45 1/0/1,29100
+50 1/1/2,29100
+45 1/1/0,29100
+0 200G,29100
+62 3/0/1,29100
+07.57 WVekin Poot (Alistar) on the way,29100
+98 01_ASTROBOY99 (Naafiri) purchased Control WVard,29100
+08 U6 Sylas has stolen Gragas'$ ulcimatel 1/1/4,29100
+U8.07 Caesar (Sylas) has shut down ElEs {(3ngis  (Bont,29100
+143G,29100
+"OB:|0 WVekin Poot (Alistar): Hexflash 8s, Flash 85 ",29100
+0B:| / Tacricall (hjni is on che way,29100
+08:| 1 Wekn Poof (Alistar) Wvait Fcr 0 -25,29100
+08.07 Caesar (Sylas) has shut down Isles (Gragas)! (Bonus Bounty:,29400
+143G),29400
+"08:10 WVekin Poof (Aliscar): Hexflash 85, Flash 85",29400
+08:1 / TaccicalO (Jhin) is on che way,29400
+08:| / Wekin Poof (Alistar): Waic For 0 - 25,29400
+08:16 Wekin Poof (Alistar) has shut down Zven (Sivir ! (Bonus,29400
+Bounty: 2136),29400
+08.07 Caesar (Sylas) has shut down Isles (Gragas ! (Bonus Bounty:,29700
+1436,29700
+"08:10 Wekin Pcof (Aliscar): Hexflash 85, Flash 85",29700
+08:./ [ TacricalO (hin) is on the way,29700
+08:1 / Wekin Poof (Aliscar): Wait For Q 25,29700
+08.| Wekin Poof (Alisrar) has shut down Zven (Sivir)! (Bonus,29700
+Bounty: 213G),29700
+08.07 Caesar (Sylas) has shut down Isles (GGragas ! (Bonus Bounty:,30000
+"08:10 Wekin Poof (Aliscar): Hexflash 8s, Flash 85",30000
+08:/ [ TacticalO (Jhin) is on the way,30000
+08:1 [ Wekin Poof (Aliscar): Wait For Q 25,30000
+08:16 Wekin Pcof (Alistar) has shut down Zven (Sivir)! (Bonus,30000
+08.24 | will trade (Gangplank) signals enemy has vision here,30000
++80,30300
+"08:10 Wekin Pcof (Aliscar): Hexflash 8s, Flash 85",30300
+08./ [ TacricalO (Jhin) is on the way,30300
+08:1 1 Wekin Poof (Alistar): Waic For Q 25,30300
+08:16 Weln Poof (Alistar) has shut down Zven (Svir) (Bonus,30300
+08.24 [ will crade (Gangplank) signals enemy has vision here,30300
+08.27 [ will trade (Gangplank) has targered philip (Aubessa),30300
+08.28 Wekin Poof (Alistar) purchased Control Ward,30300
+67,30600
+08:1 1 TacricalO (Jhin) is on che way,30900
+08:/ / Wekin Poof (Alisrar): Wait For Q 25,30900
+08.|6 Wekin Poof (Alistar) has shut down Zven (Sivir ! (Bonus,30900
+Bcunty: 213G1,30900
+08.24 trade (Gangplank) signals enemy has vision here,30900
+08.27 | will trade (Gangplank) has targered philip (Ambessa),30900
+08.28 WVekin Poof (Alistar) purchased Control Ward,30900
+08.40 ASTROBOY99 (Naafiri): Ambessa,30900
+08:/ / TacricalO (Jhin) is on the way,31200
+08:/ / Wekin Poof (Alisrar): Waic For Q 25,31200
+08.16 Wekin Poof (Aliscar) has shut down Zven (Sivir)! (Bonus,31200
+08.27 | will trade (Gangplank) has targeted philip (Ambessa),31200
+08.28 Wekin Poof (Aliscar) purchased Control Ward,31200
+18,31500
+55,31500
+08./ / Wekin Poof (Aliscar): Waic For Q 25,31500
+08:16 Wekin Poof (Alistar) has shur down Zven (Sivir)! (Bonus,31500
+08.50 Tacticall (Jhin) purchased Control Ward,31500
+08.16 Wekin Poof (Alistar) has shut down Zven (Sivir)! (Bonus,31800
+Bcunty: 213G),31800
+08.24 [ will trade (Gangplank) signals enemy has vision here,31800
+08.27 | will trade (Gangplank) has targeted philip (Rmbessa),31800
+08.28 Weln Poof (Alistar) purchased Control Ward,31800
+08.50 TacticalO (Jhin) purchased Control Ward,31800
+08.53 Caesar (Sylas): Red of Ages Need 162 gold,31800
+I will trade,31800
+08.53 Caesar (Sylas): Rod of Ages Need 162 gold,32100
+08.57 Caesar (Sylas) on the way,32100
+12,32700
+59,32700
+322,32700
+08.40 ASTROBOY99 (Naafiri): 4nbessa,33000
+08.50 TacricalO (Jhin) purchased Control Ward,33000
+08.57 Caesar (Sylas) on che way,33000
+09.| | Tacticall (Jhin) signals enemy has vision here,33000
+09.12 ASTROBOY99 (Naafiri) signals enemy has vision here,33000
+09.|3 TacricalO (Jhin) signals chat enemies are missing,33000
+J9,33600
+441,33600
+09:| / TacticalO (Jhin) signals enemy has vision here,33600
+09.13 TacricalO (Jhin) signals char enemies are missing,33600
+09.23 TacricalO (Jhin): Gragas Locker of che Iron Solari,33600
+09.24 TacticalO (Jhin) signals that enemies are missing,33600
+09.| / TacricalO (Jhin) signals enemy has vision here,33900
+09.13 TacricalO (Jhin) signals chat enemies are missing,33900
+09.24 TacricalO (Jhin) signals char enemies are missing,33900
+09:|3 TacricalO (Jhin) signals chat enemies are missing,35100
+09.23 TacricalO (Jhin): Giegas Locket of che Iron Solari,35100
+09.24 TacticalO (Jhin) signals chat enemies are missing,35100
+09.49 ASTROBOY99 (Naafiri) signals char enemies are missing,35100
+09.49 TaccicalO (Jhin): Sivli: Yun Tal Wildarrows,35100
+09.49 ASTROBOY99 (Naafiri) signals chat enemies are missing,35100
+09.51 VYekn Pcof (Aliscar} signals that enemies are missing,35100
+"09.23 TaccicalO (Jhin): Gragas "" Locker of the Iron Solari",35400
+09.49 Tacricalo (Jhin): Sivir Yun Tal Wildarrows,35400
+09.51 Wekin Poof (Alistar) signals that enemies are missing,35400
+09.53 Caesar (Sylas): Fiddlescicks Alive,35400
+09.55 Wekin Poof (Alistar) on the way,35400
+Wekin Poof,35700
+09.49 ASTROBOY99 (Naafiri) signals chat enemies are Iiizzinig,35700
+09.49 TacricalO (Jhin): Sivii Yun Tal Wildarrows,35700
+09.49 ASTROBOY99 (Naafiri) signals chat enemies are Hizinig ,35700
+09.5 Wekin Poof (Alisrar) signals chat enemies are missirig,35700
+09.55 Wekin Pcof (Alistar) on the way,35700
+09.57 Caesar (Sylas) signals enemy has vision here,35700
+09.57 ASTROBOY99 (Naafiri) on the way,35700
+09.49 ASTROBOY99 (Naafiri) signals thar enemies are missing,36000
+09.53 Caesar (Sylas): Fiddlesciclcs Alive,36000
+09.55 Wekin Poof (Alistar) is on the way,36000
+09.57 ASTROBOY99 (Naafiri) is on the way,36000
+10.04 ASTROBOY99 (Naafiri) on che way,36000
+10.06 ASTROBOY99 (Naafiri) has cargered Zven - (Slvit),36000
++50,36300
+Ist,36300
+09.55 Wekin Poof (Aliscar) on che way,36300
+09.57 ASTROBOY99 (Naafiri) on che way,36300
+10.04 ASTROBOY99 (Naafiri) on the way,36300
+10.06 ASTROBOY99 (Naafiri) has rargeced Zven (Sivir),36300
+10.07 ASTROBOY99 (Naafiri) on che way,36300
+10.09 ASTROBOY99 (Naafiri) is on che way,36300
+10.H1 ASTROBOY99 (Naafiri) signals enemy has vision here,36300
+09.55 Wekin Poof (Alisrar) is on che way,36600
+10.04 ASTROBOY99 (Naafiri) is on che way,36600
+10.06 ASTROBOY99 (Naafiri) has cargeted Zyeri = (Slvit),36600
+10.07 ASTROBOY99 (Naafiri) is on che way,36600
+10.09 ASTROBOY99 (Naafiri) on the way Wekin Poof,36600
+10:I1 ASTROBOY99 (Naafiri) signals enemy has vision here,36600
+10.04 ASTROBOr99 ([ aafiri) on che way,36900
+10.06 ASTROBOr9y (Naafiri) has cargeced WVInI,36900
+10.07 ASTROBOr99 (Naafirii I5 on the way,36900
+10.09 ASTROBOY99 (Naafiri) i5 on the way,36900
+1O:1/ ASTROBOY99 (Naafiri) signals enemy has vision here,36900
+10.20 ASTROBOY99 (Naafiri} signals everyone to back away from,36900
+Mes (Uruil),36900
+10.06 ASTROBOY99 (Naafiri) has cargered Zveri - (Sivit),37200
+10.09 ASTROBOY99 (Naafiri) is on the way,37200
+10:]1 ASTROBOY99 (Naafiri) signals enemy has vision here,37200
+10.20 ASTROBOY99 (Naafiri) signals everyone to back away from,37200
+Isles (G1agas),37200
+10.25 Caesar (Sylas) signals chat enemies are missing,37200
+10.06 ASTROBOY99 (Naafiri) has cargered Zyel Sivir},37500
+10.07 ASTROBOY99 (Naafiri) on the way,37500
+10:|[ ASTROBOY99 (Naafiri) signals enemy has vision here,37500
+bles - (Gragal),37500
+10.28 ASTROBOY99 (Naafiri) signals to be cautious,37500
+10:H[ ASTROBOY99 (Naafiri) signals enemy has vision here,37800
+Isles - (Gragas),37800
+10.25 Caesar (Sylas) signals char enemies are missing,37800
+10.34 ASTROBOY99 (Naafiri) on the way,37800
+10:11 ASTROBOY99 (Naafiri) signals enemy has vision here,38100
+Isles - (Grg2s),38100
+10.28 ASTROBOY99 (Naafiri} signals to be caurious,38100
+10.34 ASTROBOY99 (Naafiri) is on che way,38100
+10.37 Sylas has stolen Zed'5 ulcimarel,38100
+10.20 ASTROBOY99 (Naafiri) signals everyone ro back away from,38400
+10.28 ASTROBOY99 (Naafiri) signals to be caurious,38400
+10.37 Sylas has stolen Zed' 5 ulcimatel,38400
+10.43 Caesar (Sylas) is on killing spreel,38400
+I0:H ASTROBOY99 (Naafiri) signals enemy has vision here,38700
+Iles (Gruga:),38700
+10.28 ASTROBOY99 (N aafirij) signals co be caurious,38700
+10.34 ASTROBOY99 (Naafiri) on che way,38700
+10.37 Sylas has stolen Zed'5 ulcimatel,38700
+10.43 Caesar (Sylas) I5 on killing spreel,38700
+I0:I | ASTROBOY99 (Naafiri) signals enemy has vision here,39000
+Eles - (Grajie),39000
+10.34 ASTROBO99 (Naafiri) on che way,39000
+10.34 ASTROBOY99 (Naafiri) is on che way 2380,39600
+10.37 Sylas has stolen Zed'$ ulcimatel,39600
+1.02 TacticalO (hin) asking for assistance,39600
+1.02 ASTROBOY99 (Naafiri) signals enemy has vision here,39600
+1.06 ALEX HO (Fddlescicks) has slain the Voidgrubsl,39600
+1.02 TacricalO (Jhin) is asking for assistance,39900
+1.06 ALEX HO (Fiddlescicks) has slain the Voidgrubs!,39900
+1.06 Caesar (Sylas) on che way,39900
+1.08 TacricalO (Jhin) on the way,39900
+1.02 TaccicalO (Jhin) asking for assistance,40200
+1.08 TacticalO (Jhin) on che way,40200
+1.3 Caesar (Sylas): Hextech Drake Spawning in /.03,40200
+1.4 TaccicalO (Jhin): Sivir Ghost,40200
+Twill trade,40500
+MC,40500
+1.02 TaccicalO (Jhin) is asking for assisrance,40500
+1.06 ALEX HO Fid dlestkcly has slain che Voidgrubs!,40500
+1.06 Caesar (Sylas) is on the way,40500
+1.08 TacricalO (Jhin) is on che way,40500
+1.3 Caesar (Sylas): Hextech Drake Spawning in 1.03,40500
+1:4 TacricalO (Jhin): Sivir Ghost,40500
+1.4 TacricalO (hin): Sivir Ghost,40500
+1.02 ASTROBOY99 (Naafiri) signals enery has vision here,41400
+1.06 ALEX HO (Fiddlescickks) has slain che Yoidgrubd,41400
+1.08 TacricalO (Jhin) on che way,41400
+1.3 Caesar (Sylas): Hexcech Drake Spawning in 1.03,41400
+1.4 TaccicalO (Jhin): Slvir Ghost,41400
+1.4 TacricalO (Jhin): Sivir Ghost,41400
+11.34 Caesar (Sylas) signals chat enemies are missing,41400
+1.08 TaccicalO (Jhin) on che way,41700
+1:3 Caesar (Sylas): Hexrech Drake Spawning in 1.03,41700
+1.34 Caesar (Sylas) signals chat enemies are missing,41700
+1.39 Wekin Poof (Alistar) signals char enemies are missing,41700
+1.39 TacricalO (Jhin) signals chat enemies are missing,41700
+1.40 Wekin Pcof (Aliscar): Hexflash Ready; Flash 1695,41700
+108 TacricalO (Jhin) on the way,42000
+1.14 TaccicalO (Jhin): Slvir Ghost,42000
+1.14 TacricalO (Jhin): Sivir Ghost,42000
+1.34 Caesar (Sylas) signals that enemies are missing,42000
+11.39 Wekin Poof (Alistar) signals chat enemies are missing,42000
+"1.40 Wekin Poof (Alistar): Hexflash Ready, Flash 1695",42000
+705,42300
+614,42300
+70,42300
+1.14 TaccicalO (Jhin): Sivir Ghost,42300
+1.34 Caesar (Sylas) signals thar enemies are missing,42300
+140 Wekin Poof (Alistar): Hexflash Ready; Flash 1695,42300
+H:47 ASTROBOY99 (Naafiri) signals enemy has vision here,42300
+1.48 TacricalO (Jhin) signals chat enemies are missing,42300
+"1.40 Wekin Poof (Aliscar): Hexflash Ready, Flash 1695",42600
+1.47 ASTROBOY99 (Naafiri) signals enemy has vision here,42600
+1.53 ASTROBOY99 (Naafiri) signals enemy has vision here,42600
+1.53 Caesar (Sylas) signals enemy has vision here,42600
+1.54 ASTROBOY99 (Naafiri) is on che way,42600
+1.55 ASTROBOY99 (Naafiri) on che way,42600
+11.56 ASTROBOY99 (Naafiri) signals to all in,42600
+1.54 ASTROBOY99 (Naafiri) on che way,42900
+1.55 ASTROBOY99 (Naafiri) is on che way,42900
+1.56 ASTROBOY99 (Naafiri) signals to all in,42900
+157 ASTROBOY99 (Naafiri) is on che way,42900
+1.59 ASTROBOY99 (Naafiri) has cargered ALEX HO -,42900
+(Flddlescicks),42900
+12.01 ASTROBOY99 (Naafiri) signals enemy has vision here,42900
+11.55 ASTROBOY99 (Naafiri) iSjon che way,43200
+1.57 ASTROBOY99 (Naafiri) is on the way,43200
+1.59 ASTROBOY99 (Naafiri) has targeted ALEX HO -,43200
+(Flddlescicles),43200
+12.03 Sylas has stolen Gragas' $ ultimatel,43200
+12.03 ASTROBOY99 (Naafiri) is on che way,43200
+10 TTTTTTTTTT,43500
+1156 ASTROBOY99 (Naafiri) signals to all' in,43500
+1.57 ASTROBOY99 (l aafiri) Is on the way,43500
+11.59 ASTROBOr99 (Maafiri) has targeted ALE? Ho =,43500
+(Fddlclekl),43500
+1201 ASTROBOr99 (Naafiri} signals enemy has vision here,43500
+12.03 Sylas has stolen Gragas' $ ulcimacel,43500
+12.03 ASTROBOT99 (Naafiri) on che way,43500
+1201 ASTROBOT99 (Naafiri) on che way,43500
+Eles,43800
+(Fiddlescicks),43800
+12.03 Sylas has stolen Gragas'5 ulcimatel,43800
+12.01 ASTROBOY99 (Naafiri) is on the way,43800
+12:13 ASTROBOY99 (Naafiri) signals to all in,43800
+12.14 ASTROBOY99 (Naafiri) has cargered ALEX HO -,43800
+(Fiddlesciclcs),43800
+Naa,44100
+12.13 ASTROBOY99 (Naafiri) signals to all in,44100
+12.14 ASTROBOY99 (Naafiri) has cargered ALEX HO,44100
+12.18 ASTROBOY99 (Naafiri) has slain ALEX HO (Flddlescickes),44100
+for a double killl,44100
+12.19 ASTROBOY99 (Naafiri) on the way,44100
+12.19 ASTROBOY99 (Naafiri) signals to all in,44100
+12.20 ASTROBOY99 (Naafiri) is on the way,44100
+12.18 ASTROBOY99 (Naafiri) has slain ALE; HO (Flddlescicks),44400
+12.19 ASTROBOY99 (Naafiri) on che way,44400
+12.20 ASTROBOY99 (Naafiri) is on che way,44400
+12.24 ASTROBOY99 (Naafiri) is on the way,44400
+12.14 ASTROBOY99 (Naafiri) has cargeted ALEX HO -,44700
+12.18 ASTROBOY99 (Naafiri) has slain ALEX HO (Fiddlesticks),44700
+12:19 ASTROBOY99 (Naafiri) signals to all in,44700
+12.24 ASTROBOY99 (Naafiri) is on che way,44700
+(Fiddlescicls),45300
+12.18 ASTROBOY99 (Naafiri) has slain ALEX HO (Flddlesticks),45300
+for double killl,45300
+12.19 ASTROBOY99 (Naafiri) is on che way,45300
+12.20 ASTROBOY99 (Naafiri) on che way,45300
+12.39 ASTROBOY99 (Naafiri) is on che way,45300
+12.43 ASTROBOY99 (Naafiri): Fiddlescicks Flash,45600
+12.46 Caesar (Sylas) has destroyed the first turrecl,45600
+12.39 ASTROBOY99 (Naafiri) is on the way,45900
+12.43 ASTROBOY99 (Naafiri): Fiddleccicks Flash,45900
+12.43 ASTROBOY99 (Naafirij: Fiddlestickks Flash,45900
+12.46 Caesar (Sylas) has descroyed the first turrecl,45900
+12.43 ASTROBOY99 (Naafiri): Fiddlescickks Flash,46800
+12.46 Caesar (Sylas) has destroyed che first turrec?,46800
+13.06 TacticalO (hin) wants to push forward,46800
+12.39 ASTROBOY99 (Naafiri) on the way,47100
+13.06 TacricalO (Jhin) wants to push forward,47100
+13.07 TacricalO (Jhin) signals to rerreat,47100
+13.1 Ally team has compleced che Feat of Monster Slaying',47100
+13.01 ASTROBOY99 (Naafiri) has slain the Hextech Drakel,47100
+12.46 Caesar (Sylas) has destroyed che first turrecl,47400
+13.07 TacticalO (Jhin) signals to rerrear,47400
+"13.11 Ally team has compleced che Feat of Monster Slaying""",47400
+13.15 Wekin Poof (Alistar) signals chat enemies are missing,47400
+13.07 TaccicalO (Jhin) signals to rerreat,47700
+13.1 Ally team has compleced che Feat cf Monster Slayingl,47700
+13.1| ASTROBOY99 (Naafiri) has slain the Hextech Drakel,47700
+13.15 WVekin Pcof (Alistar} signals chat enemies are missing,47700
+13.19 [Team] Wekin Pcof (Alistar): bor side uflly warded,47700
+13.20 Caesar (Sylas) purchased Cortrol Ward,47700
+"13.20 [Team] Wvekn Pcof (Alistar): ""top",47700
+1321 Cesar (Sylas) en che way,47700
+"13.1 Ally team has compleced che Feat of Monster Slaying""",48000
+13.15 Wekin Poof (Aliscar) signals chat enemies are missing,48000
+13.20 Caesar (Sylas) purchased Control Ward,48000
+"13.20 [Team] Wekn Pcof (Alistar): ""top",48000
+1321 Caesar (Sylas) is on che way,48000
+13.20 Caesar (Sylas) purchased Control Wvard,48300
+"13.20 [Team] Wekin Poof (Alistar): ""top",48300
+13.27 [ will trade (Gangplank) purchased Control Ward,48300
+13.28 Caesar (Sylas) asking for vision,48300
+13.29 Wekin Poof (Alistar) Ward Quest Complecel Completion,48300
+Time: 13.29,48300
+13.20 [Team] Wekin Poof (Alistar): *top,48900
+13.221 Caesar (Sylas) is on che way,48900
+13.27 | will trade (Gangplank) purchased Control Ward,48900
+13.29 Wekin Poof (Alistar) Ward Quest Complecel Complecion,48900
+"Time: 13,29",48900
+13.40 TacricalO (Jhin) signals that enemies are missing,48900
+13.41 ASTROBOY99 (Naafiri) signals enemy has vision here,48900
+13.29 Wekin Poof (Alistar) Ward Quest Complecell Completion,49200
+13.40 TacticalO (Jhin) signals that enemies are missing,49200
+13.44 Caesar (Sylas) asking for assistance,49200
+13.45 Caesar (Sylas) is asking for assistance,49200
+13.45 TacticalO (Jhin) signals thar enemies are missing,49200
+13.29 Wekin Poof (Alistar) WYaru Q=i Zutriplerel €tpledion,49500
+"Time: |3,29",49500
+13.40 TacticalO (hin) signals that enemies are missing,49500
+13.45 Caesar (Sylas) asking for assistance,49500
+13.45 TacticalO (hin) signals that enemies are missing,49500
+13.50 ASTROBOY99 (Naafiri) signals enemy has vision here,49500
+13.45 TacricalO (Jhin) signals char enemies are missing,49800
+13.52 ASTROBOY99 (Naafiri) signals enemy has vision here,49800
+13.54 Wekin Poof (Alistar) is on the way,49800
+13.54 ASTROBOY99 (Naafiri) on the way,49800
+13.55 ASTROBOY99 (Naafiri) signals to be caucious,49800
+13.56 ASTROBOY99 (Naafiri) is on the way,49800
+Wekin E,50100
+13.54 Wekin Pcof (Alistar) is on the way,50100
+13.55 ASTROBOY99 (Naafiri) signals to be caurious,50100
+13.56 ASTROBOY99 (Naafiri) on the way,50100
+13.57 ASTROBOY99 (Naafiri) signals to all in,50100
+13.54 ASTROBOY99 (Naafiri) is on che way,50400
+13.56 ASTROBOY99 (Naafiri) is on che way,50400
+14.03 Sylas has stolen Fiddlescicks' 5 ulcimatel,50400
+14.05 ASTROBOY99 (Naafiri) i5 on rampagel,50400
+4.05 ASTROBOY99 (Naafiri) is on che way,50400
+13.55 ASTROBOY99 (Naafiri} signals to be caurious,50700
+13.57 ASTROBOY99 (Naafiri} signals to all in,50700
+14.03 Sylas has scolen Fiddlescicks' $ ulcimatel,50700
+14.05 ASTROBOY99 (Naafiri) on rampagel,50700
+14.05 ASTROBOY99 (Naafiri) is on the way,50700
+14.03 Sylas has scolen Fiddlesticks' $ ulcimatel,51000
+14.16 Caesar (Sylas) signals that enemies are missing,51000
+14.16 TacricalO (Jhin) signals that enemies are missing,51000
+14.05 ASTROBOY99 (Naafiri) on rampager,51300
+14.05 ASTROBOY99 (Naafiri) on che way,51300
+14.16 Caesar (Sylas) signals thar enemies are missing,51300
+14.18 Caesar (Sylas) on the way,51300
+14.21 ASTROBOY99 (Naafiri) signals Wekin Poof- (Alistar) to fall,51300
+back,51300
+14.21 TacricalO (Jhin} signals that enemies are missing,51300
+Naafiri ,51600
+14.21 Tacticall (Jhin) signals chat enemies are missing,51600
+1421 Wekn Pcof (Alistari on the way,51600
+14222 Caesar (Sylas) is on the way,51600
+14.23 ASTROBOY99 (Naafiri) signals to be caucious,51600
+14.23 TacricalO (Jhin) signals chat enemies are missing,51600
+14.23 ASTROBOY99 (Naafiri) signals to be caurious,51600
+14.26 ASTROBOY99 (Naafiri) is on che way,51600
+14.23 ASTROBOY99 (Naafiri) signals to be cautious,51900
+14.26 ASTROBOY99 (Naafiri) is on the way,51900
+14.27 ASTROBOY99 (Naafiri) unstoppablel,51900
+14.28 TacticalO (Jhin): Sivir Alive,51900
+14.28 TacticalO (Jhin): Sllr Alive,51900
+14.28 TacticalO (Jhin): Sivir F live,51900
+14.29 TacticalO (hin) igrul: corerreat,51900
+14.28 TacticalO (hin): Sivir Alive,52200
+14.28 TaccicalO (Jhin): Sivir Alive,52200
+14.29 TacricalO (Jhin) signals to rerreat,52200
+14.33 Wekin Poof (Alistar) purchased Locker of the Iron Solari,52200
+14.36 Welin Poof (Alistar) purchased Control Ward,52200
+14.29 TacticalO (Jhin) signals to rerreat,52500
+14.33 Wekin Poof (Alistar) purchased Locker of che Iron Solari,52500
+14.36 Wekin Poof (Alistar) purchased Control Ward,52500
+14.41 TacricalO (Jhin} signals chat enemies are missing,52500
+14.28 TaccicalO (hin): Sivir Alive,52800
+14.41 TacricalO (Jhin) signals chat enemies are missing,52800
+285,53100
+4 81,53100
+81,53700
+543,53700
+14.28 TaccicalO (Jhin): Slvli - Alive,54000
+"14.28 TaccicalO (hin): Slvii"" Alive",54000
+14.33 Wekin Pcof (Alistar) purchased Locker of che Iron Solari,54000
+4.41 TacricalO (Jhin) signals chat enemies are missing,54000
+"15,05 ASTROBOY99 (Naafiri): Serylda'$ Grudge Need 93 gold",54000
+15.06 Caesar (Sylas) signals that enemies are missing,54000
+14.28 TaccicalO (Jhin): Sivli - Alive,54300
+14.29 TacricalO (Jhin) signals to retreat,54300
+4.36 Wekin Poof (Alisrar) purchased Control Ward,54300
+441 TacticalO (Jhin) signals char enemies are missing,54300
+15.05 ASTROBOY99 (Naafiri): Serylda'5 Grudge Need 93 gold,54300
+15.06 Caesar (Sylas) signals chat enemies are missing,54300
+15.07 Caesar (Sylas): Arbessa Unleashed Teleport,54300
+15.05 ASTROBOY99 (Naafiri): Serylda '$ Grudge Need 93 gold,54600
+15.07 Caesar (Sylas): Ambesza Unleashed Teleport,54600
+15.15 TaccicalO (Jhin): Enemy Red Buff Alive,54600
+15.15 TacricalO (Jhin): Rifc Herald Spawning in 0.45,54600
+14.36 Wekin Poof (Alisrar) purchased Control Ward,54900
+1441 TacricalO (Jhin) signals char enemies are missing,54900
+15.05 ASTROBOY99 (Naafiri): Serylda $ Grudge Need 93 gold,54900
+15.07 Caesar (Sylas): Arbessza Unleashed Teleport,54900
+15.15 TacticalO (Jhin): Enemy Red Buff Alive,54900
+15.15 TacricalO (Jhin): Rift Herald Spawning in 0.45,54900
+15.18 Wekin Poof (Alistar) signals to be caurious,54900
+1375,55200
+14.41 TacricalO (Jhin) signals that enemies are missing,55200
+15.07 Caesar (Sylas): Ambessa Unleashed Teleport,55200
+15.15 TacticalO (Jhin): Enemy Red Buff - Alive,55200
+15.18 Wekin Pcof (Alistar) signals to be caurious,55200
+15.23 TaccicalO (Jhin) purchased Control Ward,55200
+15.15 TacricalO (Jhin): Riftc Herald Spawning in 0.45,55800
+15.23 TacricalO (Jhin) purchased Control Ward,55800
+15.33 ASTROBOY99 (Naafiri) signals chat enemies are missing,55800
+15.05 ASTROBOY99 (Naafirij: Serylda'5 Grudge Need 93 gold,56100
+15.06 Caesar (Sylas} signals chac enemies are missing,56100
+"15,07 Caesar (Sylas)' / riber Unleashed Telepert",56100
+15.15 Tacticall (hin); Eremy Red Buff Alive,56100
+15.15 Tacticall (Jhin): Rift Herald Spawning in 0.45,56100
+I58 Wvekin Pocf (Alistar) signals CC be caurious,56100
+1523 Tacricalu (hin) purchased Control Ward,56100
+15.33 ASTROBOY99 (Naafiri) sigrals chat enemies are missing,56100
+"15,15 TacricalO (Jhin) Enery Red Buff - Alive",56400
+15.15 TacricalO (Jhin): Rif Flerald Spawning in 0.45,56400
+15.18 Wcldn Pcof (Alistar) signals to be cautious,56400
+15.33 ASTROBOY99 (Naatiri) signals char enemies are missing,56400
+15.45 Caesar (Sylas) signals chat enemies are missing,56400
+15.46 ASTROBOY99 (Naafiri) signals enemy has vision here,56400
+15.46 [ wlll trade (GGangplank) signals enemy has vision here,56400
+CHANNELING,56700
+15.33 ASTROBOY99 (Naafiri) signals char enemies are missing,56700
+15.45 Caesar (Sylas) signals that enemies are missing,56700
+15.46 | will trade (Gangplank) signals enemy has vision here,56700
+15.47 ASTROBOY99 (Naafiri) is on che way,56700
+15.50 Caesar (Sylas) signals enemy has vision here,56700
+15.50 ASTROBOY99 (Naafiri) signals to all in,56700
+15.52 ASTROBOY99 (Naafiri) has cargered ALEX HO -,57000
+(Fiddlescickes),57000
+15.52 ASTROBOY99 (Naafiri) on the way,57000
+15.52 ASTROBOY99 (Naafiri) has targered ALEX HO,57300
+(Fiddlescicles),57300
+15.52 ASTROBOY99 (Naafiri) on che way,57300
+15.57 ASTROBOY99 (Naafiri) is on the way,57300
+15.57 Tacticall (Jhin) signals that enemies are Erissing,57300
+15.58 ASTROBOY99 (Naafiri) has cargeced the Turret,57300
+(7580),57300
+15.57 TacticalO (Jhin) signals that enemies are missing,57600
+15.58 ASTROBOY99 (Naafiri) has targered che Outer Turrer,57600
+75co],57600
+6.03 ASTROBOY99 (Naafiri) on che way,57600
+6.03 Caesar (Sylas) on the way,57600
+6.04 Wekin Poof (Alistar) on the way,57600
+16.04 ASTROBOY99 (Naafiri) has cargered che Outer Turtet,57600
+"""5690)",57600
+16.03 ASTROBOY99 (Naafiri) is on the way,57900
+16.03 Caesar (Sylas) on che way,57900
+16.04 Wekin Poof (Alistar) on che way,57900
+16.04 ASTROBOY99 (Naafiri) has cargeced che Qucei Tuitec,57900
+(5690),57900
+16.08 ASTROBOY99 (Naafiri) has cargeced che Qurer Turret,57900
+(56%0),57900
+16.10 ASTROBOY99 (Naafiri) on the way,57900
+16.04 Wekn Poof (Alistar) is on the way,58200
+16.04 ASTROBOY99 (Naafiri) has cargeced che Qurer Turrer,58200
+16.08 ASTROBOY99 (Naafiri) has cargeced the Ourer Turrer,58200
+16.12 ASTROBOY99 (Naafiri) signals enemy has vision here,58200
+16.04 ASTROBOY99 (Naafiri) has targered che Qucer Turrec,58500
+(5680),58500
+16.08 ASTROBOY99 (Naafiri) has cargeced che Qurer Turrec,58500
+(5686),58500
+16.19 ASTROBOY99 (Naafiri) on the way,58500
+16.20 Wekin Poof (Alistar) is on the way,58500
+Naafiri,58800
+(5ofo],58800
+16.19 ASTROBOY99 (Naafiri) is on che way,58800
+16.20 Wekn Poof (Alistar) is on che way,58800
+16.23 ASTROBOY99 (Naafiri) signals chat enemies are missing,58800
+16.24 Wekn Pc ? listar) signals char enemies are missing,58800
+16.26 ASTROBC Naafiri) on che way,58800
+16.20 Welan Pcof (Alistar) is on the way,59100
+16.24 Wekin Poof (Alistar) signals chat enemies are missing,59100
+16.26 ASTROBOY99 (Naafiri) on the way,59100
+16.31 ASTROBOY99 (Naafiri) is on che way,59100
+16.31 ASTROBOY99 (Naafiri) signals to be cautious,59100
+16.31 ASTROBOY99 (Naafiri) is on the way,59400
+16.31 ASTROBOY99 (Naafiri) signals to be caurious,59400
+16.32 ASTROBOY99 (Naafiri) is on che way,59400
+16.32 Caesar (Sylas) signals chat enemies are missing,59400
+16.33 Caesar (Sylas): Fiddlescicks Alive,59400
+16.32 Caesar (Sylas) signals that enemies are missing,59700
+16.37 ASTROBOY99 (Naafiri) signals to all in,59700
+16.39 TacricalO (Jhin) signals enemy has vision here,59700
+16.40 ASTROBOY99 (Naafiri) on che way,59700
+16.33 Caesar (Sylas): Fiddlescicks - Alive,60000
+16.39 TaccicalO (Jhin) signals enemy has vision here,60000
+16.40 ASTROBOY99 (Naafiri) is on che way,60000
+16.43 ASTROBOY99 (Naafiri) signals to all in,60000
+Naafi,60300
+16.33 Caesar (Sylas): Flddlescicks Alive,60300
+16.40 ASTROBOY99 (Naafiri) on che way philip,60300
+16.49 ASTROBOY99 (Naafiri) is on che way,60300
+16.33 Caesar (Sylas): Hddlescicl Alive,60600
+16.55 Wekin Pcof (Alistar) signals chat enemies are missing,60600
+16.39 TacticalO (Jhin) signals enemy has vision here,60900
+16.40 ASTROBOY99 (Naafiri) on the way,60900
+16.49 ASTROBOY99 (Naafiri) on the way,60900
+16.55 Wekin Poof (Alistar) signals chat enemies are missing,60900
+16.57 TacticalO (hin) on che way,60900
+16.59 TacticalO (Jhin): Ambessa Flash,60900
+16.55 Wekin Poof (Alistar} signals chat enemies are missing,61200
+16.57 TacricalO (Jhin) on che way,61200
+16.59 TacticalO (Jhin); Ambessa Flash,61200
+17.02 Wekin Poof (Alistar) signals to be caurious,61200
+17.03 ASTROBOY99 (Naafiri) has cargered Isles - (Grugal),61200
+17.03 Caesar (Sylas): Waic For Sylas Unleashed Teleport 1395,61200
+17.03 ASTROBOY99 (Naafiri) signals to all in,61200
+17.05 ASTROBOY99 (Naafiri) on the way,61200
+16.59 TacricalO (Jhin): Ambessa Flash,61500
+17.02 Wekin Poof (Alistar) signals to be cauticus,61500
+17.03 ASTROBOY99 (Naafiri) has cargeced Isles (Grugas),61500
+17.05 ASTROBOY99 (Naafiri) is on che way,61500
+17.09 ASTROBOY99 (Naafiri) is on the way,61500
+17.09 ASTROBOY99 (Naafiri) signals co all in,61500
+AIRBORNE,61800
+10,61800
+TTTTTT,61800
+17.02 Wekin Poof (Alistar) signals to be caucious,61800
+17.03 ASTROBOY99 (Naafiri) has targered Iles (Gragas),61800
+17.03 Caesar (Sylas): WVaic For Sylas Ulileashed Tclcport 1395,61800
+17.09 ASTROBOY99 (Naafiri) on the way,61800
+17.09 ASTROBOY99 (Naafiri) signals to all in,61800
+17.14 ASTROBOY99 (Naafiri) signals enemy has vision here,61800
+17.18 Zwer (Sivir) has shut down ASTROBOY99 (Naafiri)! (Bonus,62100
+Bounty: 375G),62100
+17.18 Caesar (Sylas) on the way,62100
+17.21 Wekin Poof (Alistar): Fiddlescicka Flash,62100
+1721 Wekin Pcof (Alistar): Fiddlescicka Flash,62100
+17.21 [les (Gragas) on kailling spreel,62100
+400 450 450 450,62400
+500,62400
+700 800,62400
+600 800 6 LEGENDARY,62400
+lonian Boots of Lucidity,62400
+17.09 ASTROBOY99 (Naafiri) signals to all i 900 950 Ability Haste,62400
+17.14 ASTROBOY99 (Naafiri) signals enemy,62400
+17.18 Zven (Sivir) has shut down ASTROBOY99 (Naafiri)! (Bopus < 10 Ability Haste,62400
+Bounty: 375G) 45 Move Speed,62400
+17.18 Caesar (Sylas) on che way,62400
+17.221 Wekin Poof (Aliscar): Fiddlescicks Flash,62400
+17.221 Wekin Poof (Aliscar): Fiddlescicks Flash Ionian Insight,62400
+17.21 Isles (Gragas) is on killing spreel Gain I0 Summoner Spell Haste:,62400
+"""This item is dedicated in honor of Ionia'$ victory",62400
+Southern Provinces on I0 December 20 CLE,62400
+17.14 ASTROBOY99 (Naafiri) signals enemy has visicn here,62700
+17.18 Zyen (Slvin) has shut down ASTROBOY99 (Naafiri)t (Bonus,62700
+17.18 Caesar (Sylas) is on che way,62700
+17.21 Wekin Pcof (Alistar): Flddlescicks Flash,62700
+17221 Wekin Pocf (Aliscar): Flddlestlcks Flash,62700
+17.21 Iies ((312ga5) is on a killing spreel,62700
+17.28 ASTROBOY99 (Naafiri) purchased Control Ward,62700
+6 KI,62700
+17.18 Caesar (Sylas) on cematio,63000
+17.21 Wekin Poof (Alisrar)  Fddleouialk Flash,63000
+17.221 Wekin Poof (Aliscir): Eiqdlesncks-Flash,63000
+17.21 Isles (Gragas) on killing spreel,63000
+17.32 Caesar (Sylas) signals that enemies are missing,63000
+17.34 Caesar (Sylas) purchased Zontrol Ward,63000
++37 8 Kr,63000
+17.34 Caesar (Sylas) purchased Control Ward,63300
+17.40 Wekin Poof (Aliscar): Cloud Drake Spawning in 0.32,63300
+17.41 Wekin Poof (Alistar) is on the way,63300
+8 Kr,63300
+17.40 Wekin Poof (Alistar): Cloud Drake Spawning in 0.32,63600
+17.41 Wekin Poof (Alistar) on che way,63600
+17.42 Wekin Pcof (Aliscar): Fiddlescicks Flash,63600
+1740 WVekn Pcof (Aliscar): Cloud Drake Spawning 0.32,64200
+1740 Wekn Pcof (Alistar): Cloud Drake Spawning in 0.32,64200
+1740 Wekn Pcof (Aliscar): Cloud Drake Spawning 0.32,64200
+17.40 Wekin Pcof (Alistar): Cloud Drake Spawning in 0.32,64200
+1741 Wekin Pcof (Alistar) on the way,64200
+17.42 Wekn Pcof (Alistar): FlddlSuckh Flash,64200
+17.42 Wekn Pcof (Alistar): Fiddleelckh Flash,64200
+17.52 Caesar (Sylas) signals enemy has vision here,64200
+17.41 Wekin Poof (Alistar) on the way,64800
+17.42 Wekin Poof (Aliscar): Fiddlescicks Flash,64800
+18.03 ASTROBOY99 (Naafiri) on che way,64800
+2776,65100
+(221,65100
+202,65100
+17.42 Wekin Poof (Aliscar): Fiddlesticks Flash,65400
+18.16 Caesar (Sylas} signals to retreat,65400
+17.42 Wekin Poof (Aliscar): Flddlescicks Flash,65700
+18.03 ASTROBOY99 (Naafiri) on the way,65700
+18.16 Caesar (Sylas) signals to recreat,65700
+18.17 ASTROBOY99 (Naafiri) is on che way,65700
+18.17 Caesar (Sylas): Waic For Sylas Unleashed Teeport - 655,65700
+18./9 Caesar (Sylas) signals to be caurious,65700
+18./9 TacricalO (Jhin) signals enemy has vision here,65700
+18.16 Caesar (Sylas) signals to rerreat,66000
+18.17 ASTROBOY99 (Naafiri) on the way,66000
+18.17 Caesar (Sylas): Wait For Sylas Unleashed Teleport 655,66000
+18.19 Caesar (Sylas) signals to be caurious,66000
+18.23 [Team] Caesar (Sylas): im late,66000
+18.24 Caesar (Sylas): Wvair For Sylas Unleashed Teleport 585,66000
+18.26 [ will trade (Gangplank) signals enemy has vision here,66000
+18.23 [Team] Caesar (Sylas): im lare,66300
+18.24 Caesar (Sylas): Wait For Sylas Unleashed Teleport 585,66300
+18.26 | will trade (Gangplank) signals enemy has vision here,66300
+Wekin Puji philip,66600
+ILCLCIA,66900
+18.19 Caesar (ylas) signals to be caurious,66900
+18.223 [Team] Caesar (Sylas): im late,66900
+18.24 Caesar (Sylas): Wair For Sylas Unleashed Telcport 585,66900
+18.37 ASTROBO (NA (Naafiri) signals to be caurious,66900
+18.40 Caesar (Sylas) is on the way,66900
+18.41 ASTROBOY99 (Naafiri) on che way,66900
+18.24 Caesar (Sylas): WVaic For Sylas Unleashed Teleport 585,67200
+18.26 [ will crade (Gangplank) signals enemy has vision here,67200
+18.37 ASTROBOY99 (Naafiri) signals to be cautious,67200
+18.40 Caesar (Sylas) is en the way,67200
+18.41 ASTROBOY99 (Naafiri) is on che way,67200
+18.42 [ will trade (Gangplank) signals enemy has vision here,67200
+18.43 Zwen (Svir) has slain TacricalO (Jhin) for double killl,67200
+18.37 ASTROBOY99 (Naafiri) signals to be caurious,67500
+18.40 Caesar (Sylas) on che way,67500
+18.41 ASTROBOY99 (Naafiri) on the way,67500
+18.42 / will trade (Gangplank) signals enemy has vision here,67500
+18.43 Zven (Sivir) has slain TacticalO (Jhin) for double killl,67500
+18.50 ASTROBOY99 (Naafiri) has slain Zven (Sivir) for double,67500
+kailll,67500
+18.51 TaccicalO (Jhin) signals char enemies are missing,67500
+10 '177,67800
+18.43 Zver (Sivir) has slain TacricalO (Jhin) for a double killl,67800
+18.50 ASTROBOY99 (Naafiri) has slain Zven (Slvir) for a double,67800
+18.51 TacricalO (Jhin) signals chat enemies are missing,67800
+"18,52 [Team] Wekin Pcof (Alisrar): big",67800
+18.52 Caesar (Sylas) signals chat enemies are missing,67800
+18.54 TacricalO (Jhin) purchased Control Ward,67800
+ASTROBOY,68100
+18.43 Zweri (Slvir) has slain TacricalO (Jhin) for a double killl,68100
+Iailll,68100
+18.5[ TacricalO (Jhin) signals chat enemies are missing,68100
+18.52 [Team] Wekin Pcof (Alisrar): big,68100
+8.52 Caesar (Sylas) signals that enemies are missing,68100
+18.54 TaccicalO (Jhin) purchased Control Ward,68100
+18.57 Wekin Poof (Alistar) purchased Control Ward,68100
+101,68400
+18.51 TacticalO (hin) signals that enemies are missing,69000
+18.52 [Team] Wekin Poof (Aliscar): big,69000
+18.52 Caesar (Sylas) signals that enemies are missing,69000
+18.54 TacticalO (Jhin) purchased Control Ward,69000
+19.13 TaccicalO (Jhin) signals chat enemies are missing,69000
+19.13 Sylas has stolen Zed' 5 ulcimatel,69000
+18.52 Caesar (Sylas) signals thar enemies are missing,69300
+19.13 TacricalO (Jhin) signals chat enemies are missing,69300
+19.13 Sylas has stolen Zed'$ ulcimatel,69300
+19.18 ASTROBOY99 (Naafiri) has cargeted philip (Ambes5a),69300
+19.19 TaccicalO (hin): Zed Flash,69300
+18.57 Wekin Poof (Alisrar) purchased Control Ward,69600
+19.13 TacticalO (Jhin) signals that enemies are missing,69600
+19.13 Sylas has stolen Zed'5 ulcimatel,69600
+19.18 ASTROBOY99 (Naafiri) has cargered philip (Ambessz),69600
+19.19 TacricalO (Jhin): Zed Flash,69600
+19.19 TacticalO (Jhin): Zed Flash,69600
+19.23 RobbyBob (Zed) has shut down Caesar (Sylas)! (Bonus,69600
+Bounty: 471G),69600
+rrnnninnnnmnna,69900
+6169,69900
+Ac,69900
+975,69900
+105,70200
+19./9 TaccicalO (Jhin): Zed Flash,70200
+1923 RobbyBob (Zedi has shur down Cesar (Sylas)! (Bonus,70200
+19.32 ASTROBOY99 (Naafiri) has cargeced che Cloud Drake (5| %),70200
+19.32 TaccicalO (Jhin) on che way,70200
+19.35 TaccicalO (Jhin) on che way,70200
+19.36 TaccicalO (Jhin) on che way,70200
+2465,70500
+ASTR,70500
+19.32 ASTROBOY99 (Naafiri) has cargeced the Cloud Drake (51%),70500
+19.32 TaccicalO (Jhin) is on che way,70500
+19.35 TaccicalO (Jhin) is on che way,70500
+19.36 TaccicalO (hin) on che way,70500
+19.37 TacricalO (Jhin) is on the way,70500
+19.41 TacticalO (Jhin) is on the way,70500
+ALEXHO,70800
+19.32 ASTROBOY99 (Naafiri) has targered the Cloud Ural,70800
+19.32 TacticalO (hin) is on che way,70800
+19.36 TacricalO (Jhin) is on che way,70800
+19.37 TaccicalO (Jhin) is on che way,70800
+19.41 TacticalO (Jhin) is on che way,70800
+19.43 ASTROBOY99 (Naafiri} signals chat enemies are missing,70800
+19.45 ASTROBOY99 (Naafiri} has slain che Cloud Drakel,70800
+19.43 ASTROBOY99 (Naafiri) signals chat enemies are missing,71100
+19.45 ASTROBOY99 (Naafiri) has slain the Cloud Drakel,71100
+19.47 ASTROBOY99 (Naafiri) signals to be cautious,71100
+19.48 ASTROBOY99 (Naafiri) signals enemy has vision here,71100
+9.49 Caesar (Sylas) signals to be caurious,71100
+19.50 Caesar (Sylas) signals to be caurious,71100
+19.50 Caesar (Sylas): Fiddlescicke Alive,71100
+145 2/2/4,71400
+138 2/4/6,71400
+'ekin Poof,71400
+156 3/2/0,71400
+170 6/4/3,71400
+19.41 TaccicalO (Jhin) on the way,71400
+19.443 ASTROBOY99 (Naafiri) signals char enemies are n,71400
+19.45 ASTROBOY99 (Naafiri) has slain the Cloud Drake 22 4/1/8,71400
+9.48 ASTROBOY99 (Naafiri) signals enemy has vision,71400
+19.49 Caesar (Sylas) signals to be caurious,71400
+19.50 Caesar (Sylas) signals to be cautious,71400
+19.50 Caesar (Sylas): Fiddlescicks - Alive,71400
+of,71700
+19.43 ASTROBOY99 (Naafiri) signals that enemies are missing,72300
+19.47 ASTROBOY99 (Naafiri) signals to be caucious,72300
+19.50 Caesar (Sylas): Fiddlesticks Alive,72300
+20.07 ASTROBOY99 (Naafiri) signals chat enemies are missing,72300
+19.50 Caesar (Sylas): Fiddlescicks Alive,72600
+20.07 ASTROBOY99 (Naafiri) signals char enemies are missing,72600
+20.14 Caesar (Sylas) on che way,72600
+20.15 TacricalO (Jhin) signals enemy has vision here,72600
+20.15 Caesar (Sylas) has rargered ALEX HO (Fiddlescicks),72600
+20.15 Caesar (Sylas) has rargered ALEX HO (Fiddlescicles),72900
+20.17 ASTROBOY99 (Naafiri) is on che way,72900
+20.18 ASTROBOY99 (Naafiri) signals chat enemies are missing,72900
+20.14 Caesar (Sylas) on the way,73200
+20.15 Caesar (Sylas) has cargered ALEX HO - (Flddlesticls),73200
+20.23 ASTROBOY99 (Naafiri) signals enemy has vision here,73200
+20.25 ASTROBOY99 (Naafiri) on the way,73200
+STUNNED,73500
+24 18,73500
+486,73500
+20.15 Caesar (Sylas) has targered ALEXHo - (Fiddlescicl),73500
+20.25 ASTROBOY99 (Naafiri) is on che way,73500
+20.30 Sylas has stolen Gragas'$ ulcimacel,73500
+20.30 Sylas has stolen Gragas'$ ulcimatel,73800
+20.32 ASTROBOY99 (Naafiri) on killing spreel,73800
+20.34 ASTROBOY99 (Naafiri) signals to all in,73800
+20.34 ASTROBOY99 (Naafiri) signals enemy has vision here,73800
+20.35 / will trade (Gangplank) on che way,73800
+20.35 ASTROBOY99 (Naafiri) is on the way,73800
+20.23 ASTROBOY99 (Naafiri} signals enemy has vision here,74100
+20.25 ASTROBOY99 (Naafiri) on che way,74100
+20.32 ASTROBOY99 (Naafiri) is on killing spreel,74100
+20.35 [ will trade (Gangplank) on che way,74100
+20.35 ASTROBOY99 (Naafiri) is on che way,74100
+20.35 / will trade (Gangplank) is on che way,74400
+20.35 ASTROBOY99 (Naafiri) is cn che way,74400
+20.43 ASTROBOY99 (Naafiri) i5 on rmpagel,74400
+20.44 Caesar (Sylas) is on che way,74400
+20.44 ASTROBOY99 (Naafiri) sighals enemy has vision here,74400
+Wekin Po,74700
+20.35 ASTROBOY99 (Naafiri) cn the way,74700
+20.43 ASTROBOY99 (Naafiri) cn Timpager,74700
+20.44 Caesar (Sylas) on the way,74700
+20.44 ASTROBOY99 (Naafiri) signals enemy has vision here,74700
+20.49 ASTROBOY99 (Naafiri) i5 on che way,74700
+20.51 Caesal (Sylas) askng for assisrance,74700
+25,75000
+19,75000
+20.34 ASTROBOY99 (Naatiri) signals enemy has vision here,75000
+20.43 ASTROBOY99 (Naafiri) on a rampagel,75000
+20.44 Caesar (Sylas) on che way,75000
+20.49 ASTROBOY99 (Naafiri) is on che wey,75000
+20.51 Caesar (Sylas) asking for assisrance,75000
+20.35 | will trade (Gangplank) on che way,75300
+20.43 ASTROBOY99 (Naafiri) is on rampagel,75300
+20.44 Caesar (Sylas) is on the way,75300
+20.49 ASTROBOY99 (Naafiri) on the way,75300
+20.51 Caesar (Sylas) asking for assistance,75300
+20.58 TacricalO (Jhin) has slain phillp (Arbessa) for a double killl,75300
+20.43 ASTROBOY99 (Naafiri) on rampagel,75600
+20.58 TacricalO (Jhin) has slain philip (Ambessa) for a double killl,75600
+21.05 Objeccive Bounties are available soon,75600
+21.06 ASTROBOY99 (Naafiri) signals char enemies are missing,75600
+250 250 300 350 400 40,75900
+600 LEGENDARY,75900
+21.08 ASTROBOY99 (Naafiri) signals char enemies are missing 550 x 2500 2500 2700 2800 2900 3OC,75900
+21.08 TacricalO (Jhin) wants t0 push forward,75900
+21.09 TacricalO (Jhin) wants to push forward r,75900
+21.10 TacricalO (Jhin) wants to push forward,75900
+You must wait before issuing more pings. 2700 3100 3200 3200,75900
+You must wair before issuing more pings.,75900
+21.[ TacricalO (Jhin) wants to push forward SELL UNDO 3016,75900
+500 EPIC,76200
+75 700 775 800 800 800 80,76200
+1100 1100 1150 1200 1200 13C,76200
+2800 2900 2900 2900 2900,76200
+2/.08 TaccicalO (Jhin) wants to push forward : 3100 3100 3200 3200 32C,76200
+21.09 TacricalO (Jhin) wants to push forward,76200
+20.10 TacricalO (Jhin) wants to push forward,76200
+You Must waic before issuing more pings.,76200
+20.10 TacricalO (Jhin) wants tO push forward 3300 3300 3333 3400,76200
+You Must wait before issuing more pings.,76200
+20.01 TacricalO (Jhin) wants tO push forward,76200
+21.16 TacricalO (Jhin) purchased Control Ward SELL UNDO 2476,76200
+21.09 TacricalO (Jhin) wants t0 push forward,76500
+21.10 TaccicalO (Jhin) wants t0 push forward,76500
+You must waic before issuing mncre pings.,76500
+20:10 TacticalO (Jhin) wants to push forward,76500
+You must wait before issuing more pings:,76500
+20.0| TacricalO (Jhin) wants to push forward,76500
+21.16 TacricalO (Jhin) purchased Control Ward,76500
+21.19 Wekin Poof (Alisrar) purchased Cortrol Ward,76500
+You must waic before issuing more pings.,76800
+You Must wair before issuing more pings.,76800
+21.0| TacricalO (Jhin) wants to push forward,76800
+21.19 Wekin Poof (Alistar) purchased Control Ward,76800
+21.22 ASTROBOY99 (Naafiri) purchased Control Ward,76800
+You must wait before issuing more pings.,78600
+21:01 TacricalO (Jhin) wants to push forward,78600
+21.19 Wekin Poof (Alisrar) purchased Control Ward,78600
+21.54 ASTROBOY99 (Naafiri) on the way,78600
+759 AIRBORNE,78900
+15,78900
+10 TtnttntMTTTTT,78900
+Zven Gangp,78900
+21;| TacricalO (Jhin) wants to push forward,78900
+21.16 TacricalO (hin) purchased Control Ward,78900
+21.19 WVekin Pcof (Alistar) purchased Control Ward,78900
+21.22 ASTROBOY99 (Naatiri) purchased Control Ward,78900
+21.58 Sylas has stolen Fiddlescicks' $ ulcimatel,78900
+21.58 ASTROBOY99 (Naafiri) signals char enemies are mi85i88,78900
+21.59 ASTROBOY99 (Naafiri) signals to be cauriou,78900
+21.16 TaccicalO (Jhin) purchased Control Ward,79200
+2/.19 Wekin Poof (Aliscar) purchased Control Ward,79200
+"2/,.22 ASTROBOY99 (Naafiri) purchased Control Ward",79200
+21.58 Sylas has stolen Fiddlescicks' $ ulcimacel,79200
+21.58 ASTROBOY99 (Naatiri) signals chat enemies are missing,79200
+21.59 ASTROBOY99 (Naafiri) signals to be cautious,79200
+22.02 ASTROBOY99 (Naafiri) signals enemy has vision here,79200
+21.22 ASTROBOY99 (Naafiri) purchased Concrol Ward,79500
+21.58 Sylas has stolen Fiddlesticks' 5 ulcimatel,79500
+"21.58 ASTROBOY99 (Naafiri) signals that ""enemies are mAHEX Ho",79500
+21.59 ASTROBOY99 (Naafiri) signals to be cautiou?,79500
+22.10 phlllp (Anbeja has shut down ASTROBOY99 (Naafiri)!,79500
+(Bonus Bounty: 318G),79500
+21.54 ASTROBOY99 (Naafiri) is on che way,79800
+21.58 Sylas has scolen Fiddlescicks' $ ulcimacel,79800
+21.58 ASTROBOY99 (Naafiri) signals chat enemies are missing,79800
+21.59 ASTROBOY99 (Naafiri) signals to be caurious,79800
+22.10 phllip (Ambessa) has shut down ASTROBOY99 (Naafiri)!,79800
+22.16 TacricalO (hin) on rampagel,79800
+"21,58 Sylas has stolen Fiddlescicks' $ ulcimatel",80100
+21.58 ASTROBOY99 (Naafiri) signals that enemies are missing,80100
+22.10 philip (Ambessa) has shut down ASTROBOY99 (Naafiri)!,80100
+22.16 TacticalO (Jhin) on rampagel,80100
+"3/3/2 628,985 pts",80100
+Wekin P,80400
+Islle,80400
+2/.58 Sylas has stolen Fiddlescicks' $ ulcimatel,80400
+22.10 philip (Ambessa) has shut down ASTROBOY99 (Naafiri)l,80400
+22.16 TacricalO (Jhin) on rampagel,80400
+22.24 TacricalO (Jhin) has slain phillp (Arbessa) for a double klll,80400
+22.16 TaccicalO (Jhin) cn a rampagel,80700
+22.24 TacticalO (Jhin) has slain phlllp (Atbessa) for a double killl,80700
+22.27 TacticalO (Jhin) has slain Zweni (Slvir) for & quadra killl,80700
+22.27 Caesar (Sylas) signals that enemies are missing,80700
+22.28 ASTROBOY99 (Naafiri) signals chat enemies are missing,80700
+22.29 TacricalO (Jhin) has slain Isles (Grzgus) for 3 penta killl,80700
+22.31 ASTROBOY99 (Naafiri) signals chat enemies are missing,80700
+Tacticalo,81000
+22.27 TacricalO (Jhin) has slain Zveni (Sivir) for a quadra killl,81000
+22.29 TacricalO (Jhin) has slain Eles (Gragas) for penca killl,81000
+22.32 ASTROBOY99 (Naafiri) signals chat enemies are missing,81000
+22.32 Ally team has scored an acel,81000
+22.35 [Team] Wekin Pcof (Alistar): hit me daddy,81000
+22.29 TaccicalO (Jhin) has slain [sles (Gragas) for a penca Illl,81300
+22.3| ASTROBOY99 (Naafiri) signals chat enemies are missing,81300
+22.35 [Team] Wekin Poof (Alisrar): hit me daddy,81300
+22.37 [Team] Wekin Poof (Alistar):,81300
+22.41 Wekin Poof (Alisrar) is on che way,81300
+22.41 Caesar (Sylas): R - Ready (Fiddlescicks),81300
+22.29 TacticalO (Jhin) has slain Isles (Gragas) for a penca klll,81600
+22.35 [Team] Wekin Poof (Alisrar): hic me daddy,81600
+22.41 Wekin Poof (Aliscar) is on che way,81600
+22.32 ASTROBOY99 (Naafiri) signals that enemies are missing,82500
+22.332 Ally team hzs scored an acel,82500
+22.35 [Team] Wekin Poof (Alistar): hir me daddy,82500
+22.37 [Team] Wekin Pcof (Alistar):,82500
+22.41 Weln Poof (Alisrar) is on the way,82500
+23.00 [ will trade (Gangplank) purchased Control Ward,82500
+22.35 [Team] Wvekn Pcof (Aliscar): hit me daddy,82800
+22.41 Wekin Poof (Alistar) is on the way,82800
+23.00 [ will trade (Gangplank) purchased Control Wvard,82800
+23.03 TacricalO (Jhin) purchased Control Ward,82800
+23.06 Wekin Pcof (Alisrar) purchased Control Ward,82800
+22.41 Wekin Poof (Aliscar) on che way,83100
+22.41 Caesar (Sylas): R - Ready (Fiddlesticks),83100
+23.00 | will trade (Gangplank) purchased Control Ward,83100
+23.06 Wekin Poof (Alistar) purchased Control Ward,83100
+23.08 ASTROBOY99 (Naafiri) on che way,83100
+22.41 Wekin Poof (Alisrar) is on the way,83400
+23.03 TacticalO (Jhin) purchased Control Ward,83400
+23.14 ASTROBOY99 (Naafiri) signals enemy has vision here,83400
+22.37 [Team] Wekin Poof (Alisrar):,83700
+22.41 Wekin Poof (Aliscar) on the way,83700
+23.08 ASTROBOY99 (Naafiri) on the way,83700
+22.41 Caesar (Sylas): Ready (Fiddlescicks),84000
+23.03 Tacticall (hin) purchased Control Ward,84000
+23.08 ASTROBOY99 (Naafiri) is on che way,84000
+23.22 ASTROBOY99 (Naafiri) is on the way,84000
+23.03 TacricalO (Jhin) purchased Conicrol Ward,84300
+23.22 ASTROBOY99 (Naafiri) is on che way,84300
+23.26 ASTROBOY99 (Naafiri) has cargeced the Aralhan (6996),84300
+wikch 500G bouney,84300
+23.29 [ will trade (Gangplank) signals enemy has vision here,84300
+pniranng mnnnnnqp philip,84600
+Tenorenananaenin,84600
+wich Juug aane,84600
+23+2h crude (Gangplank} signals enemy has vision here,84600
+23.32 AST?'O3oY99 (Naafiri) signals to be cautious,84600
+23.33 ASTROBOY99 (Naafiri) has cargered che Acaldian (35%]),84600
+wich & 50OG beunty,84600
+23.34 ASTROBOY99 (Naafiri) on the way,84600
+23.35 ASTROBOY99 (Naafiri) has cargered ALEX HO -,84600
+(Fiddlescieks),84600
+Vekin Poof,84900
+Tntnmmnmnnmm,84900
+wich & SOOG bouncy,84900
+23.32 ASTROBOY99 (Naafiri) signals to be caucious,84900
+23.33 ASTROBOY99 (Naafiri) hus cargeced che Acakhan (3596),84900
+wich 2 50OG beure;,84900
+23.34 ASTROBOY99 (Naafiri) is on che way,84900
+23.35 ASTROBOY99 (Naafiri) has Cargeced ALEX HO,84900
+23.29 | will crade (Gangplank) signals enemy has vision here,85200
+23.32 ASTROBOY99 (Naafiri) signals t0 be caurious,85200
+23.33 ASTROBOY99 (Naafiri) has cargered che Atakhani (15%8),85200
+ch a 50OG bouicy,85200
+23.34 ASTROBOY99 (Naafiri) is on the way,85200
+23.35 ASTROBOY99 (Naafiri) has cargeced ALEX HO,85200
+23.46 / will trade (Gangplank) signals enemy has vision here,85200
+MMM,85500
+23.3} ASIROBOY99 (Naafiri) has cargered che Atakhan (35%),85500
+Fich Juug boultt,85500
+"23,34 ASTROBOY99 (Naafiri) on the way",85500
+23.35 ASTROBOY99 (Naafiri) has cargered ALEX HO,85500
+(Fiddlewclels),85500
+23.46 [ will trade (Gangplank) signals enemy has vision here,85500
+23.50 ASTROBOY99 (Naafiri) has slain Ruinous Arakhan?,85500
+2351 ASTROBOY99 (Naafiri) on the way,85500
+TiTTnTTTM,85800
+M,85800
+23.35 ASTROBOY99 (Naafiri) has targeced ALEZ ECE,85800
+"(Fiddlescicls,",85800
+23.46 [ will crade (Gangplank) signals enemy has vizien here,85800
+23.50 ASTROBO 99 (Naafiri) has slain Ruinous Atakhan!,85800
+23551 ASTROBO(99 (Naafiri) is on che way,85800
+23.53 ASTROBOY99 (Naafiri) has cargeced PibbyBab - (Zed),85800
+23.54 TacricalO (Jhin) legendaryl,85800
+23.56 TacricalO (Jhin) asking for assistance,85800
+(Fiddlestlcls),86100
+23.46 | will trade (Gangplank) signals enemy has vision here,86100
+23.50 ASTROBOY99 (Naafiri) has slain Ruinous Atakhan!,86100
+23.51 ASTROBOY99 (Naafiri) is on che way,86100
+23.53 ASTROBOY99 (Naafiri) has cargeced RobbyBeb (Zed),86100
+23.50 ASTROBOY99 (Naafiri) has slain Ruinous Ataldhan!,87000
+23.53 ASTROBOY99 (Naafiri) has cargeced RobbyBob (Zed),87000
+23.54 TacticalO (hin) legendaryl,87000
+23.56 Tacricalo (hin) asking for assistance,87000
+24.15 ASTROBOY99 (Naafiri) is on the way,87000
+24.16 ASTROBOY99 (Naafiri) signals to all in,87000
+TTTTT,87300
+2Ji50 PSTROBOY99 (Naafiri) has slain Ruinous Arakhanl,87300
+1551 FSTROBOY99 (Naafiri) i5 on the way,87300
+35} STROBOY99 (Naatiri) has targered RobbyBcb (Zed),87300
+2304 UacticalO Uhin) legendary,87300
+23.56 TaccicalO (Jhin) asking for assistance,87300
+24.16 Caesar (Sylas} purchased Control Wvard,87300
+STUINED,87600
+TuTTMnTTTTTTT,87600
+Wekin Poui,87600
+4/4/2 628.985 pts,87600
+24.16 Caesar (Sylas) purchased Control Wvard,87900
+24.30 Caesar (Sylas): Cloud Drake Spawning in 0:16,87900
+"4/4/2 628,985 pts",87900
+23.53 ASTROBOY99 (Naafiri) has cargered RobbyBob (Zed),88200
+23.54 TacricalO (hin) legendaryl,88200
+24.16 Caesar (Sylas) purchased Control Ward,88200
+24.30 Caesar (Sylas): Cloud Drake Spawning in 0.16,88200
+24.39 Caesar (Sylas): Fiddlescicks Alive,88500
+24.40 TacricalO (Jhin) legendaryl,88500
+24.40 Caesar (Sylas): Ambessa Alive,88500
+24.39 Caesar (Sylas): Flddlescicks Alive,88800
+24.40 TaccicalO (Jhin) legendaryl,88800
+2440 Caesar (Sylas): Aubes Alive,88800
+24.46 Wekn Pcof (Alistar) asking for assistance,88800
+Cwecan,89100
+Ai MMI,89100
+4434,89100
+24.39 Caesar (Sylas): Flddlesckcls Alive,89100
+2440 Caesar (Sylas): A Mbessan Alive,89100
+24.46 Wekin Pcof (Alistar) asking for assistance,89100
+24.48 Sylas has stolen Ambessa' $ ulcimatel,89100
+24.50 [ will trade (Gangplank) signals enemy has vision here,89100
+24.30 Caesar (Sylas): Cloud Drake - Spawning in 0.16,89400
+24.39 Caesar (Sylas): Flddlesclcles Alive,89400
+24.40 TacricalO (hin) legendaryl,89400
+2440 Caesar (Sylas): A mbensa Alive,89400
+24.46 Wekin Pcof (Alistar) asking for assisrance,89400
+24.48 Sylas has stolen Ambessa'$ ulcimacel,89400
+24.52 [ will crade (Gangplank) signals enemy has vision here,89400
+24.46 Wekin Poof (Aliscar) asking for assistance,89700
+24.48 Sylas has stolen Ambessa'$ ulcimatel,89700
+24.52 [ will trade (Gangplank) signals enemy has vision here,89700
+24.57 TacticalO (Jhin) legendaryl,89700
+CHANNELIND ING,90000
+24.40 Caesar (Sylas): Arbessu Alive,90000
+24.46 Wekin Pcof (Alistar) is asking for assistance,90000
+24.48 Sylas has scolen Ambessa'$ ulcimatel,90000
+24.57 TacricalO (Jhin) legendaryl,90000
+25.02 Wekin Pcof (Alisrar) purchased Cortrol Ward,90000
+25.05 ASTROBOY99 (Naafiri) purchased Control Ward,90000
+24.40 Caesar (Sylas): Arbena Alive,90300
+24.46 Wekin Poof (Alistar) asking for assistance,90300
+25.02 Wekin Poof (Alisrar) purchased Control Ward,90300
+24.48 Sylas has stolen Ambessa'5 ulcimatel,90600
+24.57 TacticalO (hin) legendaryl,90600
+25.02 WVekin Poof (Aliscar) purchased Control Vvard,90600
+25.14 ASTROBOY99 (Naafiri) on the way,90600
+24.50 [will trade (Gangplank) signals enemy has vision here,90900
+2452 crade (Gangplank) signals enemy has vision here,90900
+24.57 Tacricall (Jhin) legendaryl,90900
+"25,02 Wekin Poof (Aliscar) purchased Control Ward",90900
+25.02 Wekn Poof (Alisrar) purchased Cortrol WNard,91200
+25.05 ASTROBOY99 (Naafiri) purchased Control WVard,91200
+25.26 ASTROBOY99 (Naafiri) on che way,91200
+24.50 | will trade (Gangplank) signals enemy has vision here,91500
+24.52 | will trade (Gangplank) signals enemy has vision here,91500
+25.02 Wekin Poof (Aliscar) purchased Control Ward,91500
+25.26 ASTROBOY99 (Naafiri) is on che way,91500
+25.28 ASTROBOY99 (Naafiri) on the way,91500
+7,91800
+25.02 WVekin Pcof (Aliscar) purchased Control Ward,91800
+25.14 ASTROBOY99 (Naafiri) on che way,91800
+25.28 ASTROBOY99 (Naafiri) is on the way,91800
+25.36 ASTROBOY99 (Naafiri) signals enemy has visicn here,91800
+25.26 ASTROBOY99 (Naafiri) is on the way,92100
+25.36 ASTROBOY99 (Naafiri) signals enemy has vision here,92100
+25.38 TacricalO (Jhin) is on the way,92100
+25.38 ASTROBOY99 (Naafiri) signals enemy has vision here,92100
+ASTRQBL,92400
+206,92400
+98,92400
+256,92400
+OW,92400
+25.38 TacticalO (Jhin) is on the way,92400
+25.41 ASTROBOY99 (Naafiri) signals chat enemies are missing,92400
+25.44 ASTROBOY99 (Naafiri) has cargeced che Cloud Drake (30%),92400
+wich 600G bounty,92400
+"25.46 An enen"" Objective Bounty has been claimed on Drageni",92400
+(Bonus Bounty: 600G splic for cheir Ceam ),92400
+,92700
+25.44 ASTROBOY99 (Naafiri) has cargeced che Clud Drike 80%),92700
+ich 1 600G bouncy,92700
+25.46 An enemy Objective Bounty has been claimed o Drgen!,92700
+(Bonus Bounty: 600G splic for cheir team ),92700
+25.49 The enemy team has stolen the Cloud Drakel,92700
+25.51 [Team] Wekin Pcof (Alistar): MB,92700
+25.51 Sylas has stolen Fiddlesticks' 5 ulrimatel,92700
+wich 2 6O0G bounty,93000
+25.46 An eneny Objective Bounty has been claimed on Dragon,93000
+(Bonus Bounty: 600G splic for cheir team ) Wekin Poof,93000
+25.49 The enemy ceall has stolen the Cloud Drakel TMMMMI,93000
+25.51 [Team] Wclan Poof (Alistar): MB,93000
+25.51 Sylas has stolen Fiddlesticks'$ ulcimatel,93000
+25.52 Wekan Poof (Aliscar) is on che way,93000
+25.55 TacricalO (Jhin) legendaryl,93000
+TM,93300
+25.49 The enery ceanihas stolen che Cloud Drakel,93300
+25.51 [Team] Wekin Poof (Alistar): MB,93300
+25.51 Sylas has stolen Fiddlescicks' $ ulcimacel,93300
+25.52 Wekin Poof (Alistar) is on che way,93300
+25.55 TaccicalO (Jhin) is legendaryl,93300
+25.57 TacricalO (Jhin): (Gragas R,93300
+25.57 TaccicalO (Jhin): Grages R,93300
+25.57 TacricalO (Jhin): (ragas R,93300
+25.51 Sylas has stolen Fiddlesticks'$ ultimatel,94200
+25.52 Wekin Poof (Alistar) on che way,94200
+25.55 TacticalO (Jhin) is legendary!,94200
+25.57 TacticalO (Jhin): Gragas,94200
+25.57 TacticalO (Jhin): Gragas R,94200
+25.57 TacricalO (Jhin): Gragas R,94200
+26.15 Caesar (Sylas) asking for assistance,94200
+26.15 TaccicalO (Jhin) signals chat enemies are missing,94200
+25.57 TacricalO (Jhin): Gragas,94500
+25.57 TaccicalO (Jhin): Gragas,94500
+25.57 acricalO (Jhin): Graga5,94500
+26.15 TacricalO (Jhin) signals chat enemies are missing,94500
+26.18 ASTROBOY99 (Naafiri) signals enemy has vision here,94500
+26.18 ASTROBOY99 (Naafiri) signals to all in,94500
+25.57 TacticalO (hin): Gragas Len Mn,94800
+26.23 ASTROBOY99 (Naafiri) signals enemy has vision here,94800
+26.25 Caesar (Sylas) has cargeced che Baron Nashor (405) wich ? &,94800
+360G bounty,94800
+MnMM,95100
+26.25 Caesar (Sylas) has cargeced che Barori Pushar (4053) wich a &,95100
+26.28 Caesar (Sylas) has targeced the Baroni [ Jashor (2793) wich a &,95100
+KUUbEoi,95400
+Wek,95400
+Sylas,95400
+26.28 Caesar (Sylas) has cargered the Baron Nashor (27.96) wich,95400
+360G bourty,95400
+26.33 ASTROBOY99 (Naafiri) has hit & new milestone on Epic,95400
+Monsters Killed: 901,95400
+26.33 ASTROBOY99 (Naafiri) has slain Baron Nashor!,95400
+26.34 Caesar (Sylas) on the way,95400
+26.36 Caesar (Sylas) on the way,95400
+26.36 ASTROBOY99 (Naafiri) is on the way,95400
+13,95700
+138,95700
+26.33 ASTROBOY99 (Naafiri) has hic new milestone on Epic,95700
+Monsters Killed: 902,95700
+26.34 Caesar (Sylas) on che way,95700
+26.36 Chesar (Sylas) on che way,95700
+26.36 ASTROBOY99 (Naafiri) is on che way,95700
+"26.39 TacricalO (Jhin) legendary""",95700
+26.33 ASTROBOY99 (Naafiri) has slain Baron Nashorl,96000
+26.36 Caesar (Sylas) on che way,96000
+26.36 ASTROBOY99 (Naafiri) on the way,96000
+26.39 TacricalO (Jhin) legendaryl,96000
+26.42 TacticalO (hin) has slain RobbyBob (Zed) for a double killl,96000
+2800,96300
+26.36 ASTROBOY99 (Naafiri) on tche way,96300
+26.39 TaccicalO (Jhin) legendaryl,96300
+26.42 TacricalO (Jhin) has slain RobbyBob (Zed) for a double killl,96300
+26.49 ASTROBOY99 (Naafiri) has slain Isles (Gragas) for double,96300
+26.34 Caesar (Sylas) is on che way,96600
+26.36 Caesar (Sylas) is on che way,96600
+"26.39 TaccicalO (Jhin) legendary""",96600
+26.42 TacticalO (Jhin) has slain RobbyBob (Zed) for double killl,96600
+26.55 ASTROBOY99 (Naafiri) is on the way,96600
+kaill?,96900
+26.55 ASTROBOY99 (Naafiri) on the way,96900
+26.57 TacricalO (Jhin): Fiddlescicks Alive,96900
+26.58 TaccicalO (Jhin) signals chat enemies are missing,96900
+27.0/ TacricalO (Jhin) signals chat enemies are missing 123,96900
+killl,97200
+27.01 TacricalO (Jhin) signals char enemies are missing,97200
+27.02 TacricalO (Jhin) signals enemy has vision here,97200
+27.05 Ally team has scored an acel,97200
+27.06 [Team] Wekin Pcof (Alistar): caniac combo,97200
+26.55 ASTROBOY99 (Naafiri) is on che way,97500
+26.57 TacticalO (Jhin): Flddlescicks Alive,97500
+26.58 TacticalO (Jhin) signals char enemies are missing,97500
+27.01 TacticalO (Jhin) signals char enemies are missing,97500
+27.06 [Team] Wekin Poof (Alistar): caniac combo,97500
+26.57 TacticalO (Jhin): Fiddlescicks Alive,97800
+26.58 TacricalO (Jhin) signals char enemies are missing,97800
+27.0/ TacricalO (Jhin) signals char enemies are missing,97800
+27.02 TacticalO (Jhin) signals enemy has vision here,97800
+27.12 [ will trade (Gangplank) has hit a new milestone on,97800
+Scructures Destroyed: 3251,97800
+AlS,98700
+"2706 [Tell] ""ekin Poof (A lijzur)"" caniac ccnbo",98700
+27-12 [will Lrade ((angplrk) hw hc iev Mlexcone DIJ,98700
+Srruccures Destroped J2I,98700
+1726 Ememy [eanllagread {0 9 juneuder wich 'Oe; ior and,98700
+"J8anx,",98700
+27.28 F ST 'O8O 99 ( hutiri) hias hic _ new Ilexcolie Dj,98700
+Scrruecunts Decro/ed; 751,98700
+17.J0 Sylis Jus Ecler Sivir '; Ulcinarel,98700
+Scruccures Destreyed: 3251,99000
+27.26 Enemy tcam agreed to surrender wich vctes for and,99000
+82inst.,99000
+"27,28 ASTROBOY99 (Naafiri) has hic & nev milestcne on",99000
+Scruccures Descrcyed: 751,99000
+"27,30 Sylas has stolen Sivir' $ ulcimatel",99000
+"27,.33 Wekin Pccf has disconnecced",99000
+27.35 [All] Taccicalo {Jhin): g8,99000
+Mkoimtr,99300
+MKoIElyo,99300
+Hhcoidor,99300
+Mkoisup,99300
+Hcoia,99300
+Mkoimyt,99600
+5,99600
+MKoItlye,99600
+Hhoidor LEVEL UP,99600
+ 375 +20 LP +1498 MP,99600
+~lvvvvv MASTERY 5,99600
+CHALLENGER Mark Earned,99600
+MKoisup 1324 LP,99600
+roia,99600
+MKoItlya,99900
+Mioi Jor,99900
+coia,99900
+Al Mode All Images Videos Short videos Forums News More,100200
+League of Legends Wiki,100200
+https {lwiki leagueoflegends com > en-US Edge_oi_Ni_.,100200
+Edge of Night,100200
+"Dec 29,2024 Grants a spell shield that blocks the next hostile ability (40 second",100200
+"cooldown, timer restarts upon  taking damage from champions):",100200
+Fandom,100200
+"https {lleagueoflegends fandomcom > wiki , Edge_ot_N_",100200
+Edge of Night League of Legends Wiki Fandom,100200
+Edge of Night is a legendary item in League of Legends_ Annul is placed on cooldow,100200
+when the user dies_ Annul will be active on clones of the user,100200
+Images,100200
+Edge of Night | League of Leg  . Edge of Night | League of Leg _ League of Items Edge of Night,100200
+League of Legends Wiki - _ League of Legends Wki - _. League of Items,100200
+A Chat on Discord,100500
+Recipe,100500
+Navigation Edge of Night,100500
+Community portal 3000 (C 850),100500
+Recent changes Serrated Dirk,100500
+Random page 1000 300),100500
+Long Sword,100500
+League of Legends 350,100500
+Champions 350,100500
+Items Tunneler,100500
+Runes 1150 (8 400),100500
+Collection Long Sword,100500
+Public Beta 350,100500
+Ruby Crystal,100500
+Titles 400,100500
+Teamfight Tactics,100500
+Legends of Runeterra Cost Analysis,100500
+Wild Rift,100500
+Universe Gold Value,100500
+50 attack damage = 1750,100500
+Player tools,100500
+250 health = 666.67,100500
+HD assets 15 lethality 450,100500
+Tools Total Gold Value 2866.67,100500
+What links here Gold Lefficiency,100500
+Related changes Edge of Night'$ base stats are 95.569 gold efficient:,100500
+Related changes Edge of Night' $ base stats are 95.569 gold efficient:,100800
+Related changes Edge of Night'$ base stats are 95.56% gold efficient:,101400
+Special pages,101400
+Page information,101400
+Create new page Notes,101400
+ANNUL is placed on cooldown when the user dies:,101400
+Recent changes,101700
+Random page TCCATAET,101700
+League of Legends,101700
+Champions,101700
+Items,101700
+Runes Share on Insights,101700
+Collection,101700
+Public Beta Unlimited storage for videos un,101700
+Titles Share Link,101700
+Legends of Runeterrz Social Share,101700
+Universe,101700
+Share on You,101700
+HD assets,101700
+Share on Dise,101700
+Tools,101700
+What links here,101700
+Related changes,101700
+Special pages aetran Recartat,101700
+Create new page WWll,101700
+Redeem,101700
+MKoieiyoyd,102000
+MKoI Jojopyun MKOI Supa,102000
+MKoiSupb,102000
+MKoiaivaro,102000
+MKOIelyoyd,102300
+MKoi Jojopyun,102300
+75 BERST,102300
+MKoisupb,102300
+MKol Jojopyun,102600
+MKOI Supa,102600
+MKoisupj +62,102600
+Mkoiaivaro,102600
+Blue team,102900
+MKOIElyoya,102900
+MKoI Jojopyun,102900
+Mkoisupb,102900
+HKoianvaro,102900

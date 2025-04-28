@@ -25,6 +25,18 @@ def wait_for_file(path, timeout=120):
             raise TimeoutError(f"[ERROR] Timeout: {path} not found after {timeout} seconds.")
     print(f"[INFO] Found file: {path}")
 
+def run_chat_extraction(video_path, match_dir):
+    chat_output_dir = os.path.join(match_dir, "chat_text")
+    os.makedirs(chat_output_dir, exist_ok=True)
+
+    print(f"[INFO] Running video chat text extractor...")
+    subprocess.run([
+        "python", "video_chat_extractor/main.py",
+        "-input-file", video_path,
+        "-output-folder", chat_output_dir
+    ], check=True)
+    print(f"[DONE] Chat text extraction finished.")
+
 def main():
     if len(sys.argv) < 2:
         print("Usage: python run_pipeline.py <path_to_config>")
@@ -33,7 +45,8 @@ def main():
     config_path = sys.argv[1]
     config, _ = load_config(config_path)
     match_id = config["match_url"].split("/")[-1].split("#")[0]
-    video_path = os.path.join("data", f"match_{match_id}", "video.mp4")
+    match_dir = os.path.join("data", f"match_{match_id}")
+    video_path = os.path.join(match_dir, "video.mp4")
 
     # Schritt 1: scrapeWebData
     run_script("scrapeWebData.py", config_path)
@@ -43,6 +56,9 @@ def main():
 
     # Schritt 3: predict_video
     run_script("predict_video.py", config_path)
+
+    # Step 4: run chat text extractor
+    run_chat_extraction(video_path, match_dir)
 
     print("[PIPELINE DONE] Alles erfolgreich durchgelaufen.")
 

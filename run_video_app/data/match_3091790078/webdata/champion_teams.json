@@ -1,42 +1,42 @@
 [
   {
-    "champion": "Ambessa",
+    "champion": "Aatrox",
     "team": "blue"
-  },
-  {
-    "champion": "Ekko",
-    "team": "blue"
-  },
-  {
-    "champion": "Akshan",
-    "team": "blue"
-  },
-  {
-    "champion": "Corki",
-    "team": "blue"
-  },
-  {
-    "champion": "Bard",
-    "team": "blue"
-  },
-  {
-    "champion": "Akali",
-    "team": "red"
-  },
-  {
-    "champion": "Lee Sin",
-    "team": "red"
   },
   {
     "champion": "Zed",
+    "team": "blue"
+  },
+  {
+    "champion": "Ahri",
+    "team": "blue"
+  },
+  {
+    "champion": "Kai'Sa",
+    "team": "blue"
+  },
+  {
+    "champion": "Poppy",
+    "team": "blue"
+  },
+  {
+    "champion": "Nidalee",
     "team": "red"
   },
   {
-    "champion": "Anivia",
+    "champion": "Kha'Zix",
     "team": "red"
   },
   {
-    "champion": "Rell",
+    "champion": "Viktor",
+    "team": "red"
+  },
+  {
+    "champion": "Miss Fortune",
+    "team": "red"
+  },
+  {
+    "champion": "Pantheon",
     "team": "red"
   }
 ]
