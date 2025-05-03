@@ -45,6 +45,7 @@ s = timestamp % 60
 with open(RESULTS_PATH, "r") as f:
     results = json.load(f)
 
+gold_graph = pd.read_csv(GOLD_CSV)
 frame_files = sorted(results.keys())
 
 # ---- Team color ---- #
@@ -110,7 +111,6 @@ if 'timestamp' in gold_df.columns: # Convert 'timestamp' from minutes to seconds
 
 # ---- Streamlit UI ---- #
 st.markdown("---")
-st.title("Minimap Prediction Viewer")
 
 # ---- Load CSS ---- #
 with open(STYLE_PATH, "r") as f:
@@ -145,9 +145,9 @@ left_col, spacer, right_col = st.columns([2,0.2,2])
 
 with right_col:
     st.subheader("LegaueOfGraphs-URL and the Twitch-VOD:")
-    st.page_link(config["match_url"], label="LeagueOfGraphs Data")
-    st.page_link(f"https://www.twitch.tv/videos/{config['vod_id']}?t={h}h{m}m{s}s", label="Twtich VOD")
-    st.markdown("---")
+    st.link_button("🔗 LeagueOfGraphs Match", url=config["match_url"])
+    st.link_button("🎥 Watch Twitch VOD", url=f"https://www.twitch.tv/videos/{config['vod_id']}?t={h}h{m}m{s}s")
+
     def image_to_base64(path):
         with open(path, "rb") as img_file:
             return base64.b64encode(img_file.read()).decode()
@@ -193,14 +193,14 @@ with right_col:
     
 with left_col:
     timestamp = data.get("timestamp", "Unknown")
-    seconds = 0
+    event_seconds = 0
     
     if timestamp != "Unknown":
         time_parts = list(map(int, timestamp.split(":")))
-        seconds = time_parts[0] * 3600 + time_parts[1] * 60 + time_parts[2]
+        event_seconds = time_parts[0] * 3600 + time_parts[1] * 60 + time_parts[2]
 
     # Get the gold difference row
-    gold_value = gold_df[gold_df['timestamp'] <= seconds].tail(1)
+    gold_value = gold_df[gold_df['timestamp'] <= event_seconds].tail(1)
 
     # Prepare data
     if not gold_value.empty:
@@ -214,7 +214,6 @@ with left_col:
     st.dataframe(pd.DataFrame(table_data), hide_index=True)
     
     # Gold Graph
-    gold_graph = pd.read_csv(GOLD_CSV)
     st.line_chart(gold_graph, x="timestamp", y="gold_diff",x_label="Minutes", y_label="")
     
     st.markdown("### Event Log")
@@ -243,13 +242,26 @@ with left_col:
     # Sort all events by time
     full_event_log = sorted(full_event_log, key=lambda x: x["time_seconds"])
 
+     # --- Find closest event to the current frame time ---
+    current_event = None
+    for event in full_event_log:
+        if event["time_seconds"] <= event_seconds:
+            current_event = event
+
     # Display event log
     with st.container(height=450):
         if full_event_log:
-            for event in full_event_log:
+            for id, event in enumerate(full_event_log):
                 mm = event["time_seconds"] // 60
                 ss = event["time_seconds"] % 60
-                st.markdown(f"[{mm:02}:{ss:02}]: {event['text']}")
+                time_label = f"{mm:02}:{ss:02}"
+
+                element_id = f"event-{id}"
+
+                if event == current_event:
+                    st.markdown(f"<div class='event_log_highlight'>[{time_label}] {event['text']}</div>", unsafe_allow_html=True)
+                else:
+                    st.markdown(f"[{time_label}] {event['text']}", unsafe_allow_html=True)
         else:
             st.write("No events at this time.")
 

@@ -46,3 +46,8 @@
     border: 3px solid #922b32;
     border-radius: 9999px;
 }
+
+.event_log_highlight {
+    background-color: #757575;
+    font-weight: bold;
+}
